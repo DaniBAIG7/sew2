@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="Ejercicio8.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Ejercicio8.js"></script>
+</head>
+<body>
+    <h1>Prevision meteorológica para 3 hitos de la ruta "De Oviedo a Vegadeo"</h1>
+    <article>
+        <h2>Oviedo</h2>
+        <h3 id="oviedo">Información meteorológica sobre Oviedo</h3>
+        <script>meteoRuta3.cargarDatos()</script> 
+    </article>
+
+    <article>
+        <h2>Cangas del Narcea</h2>
+        <h3 id="cangas_del_narcea">Información meteorológica sobre Cangas del Narcea</h3>
+        <script>meteoRuta1.cargarDatos()</script>
+    </article>
+
+    <article>
+        <h2>Vegadeo</h2>
+        <h3 id="vegadeo">Información meteorológica sobre Vegadeo</h3>
+        <script>meteoRuta2.cargarDatos()</script>
+    </article>
+</body>
+</html>

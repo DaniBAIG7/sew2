@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora RPN</title>
+    <link rel="stylesheet" href="./CalculadoraRPN.css" />
+    <script src="./CalculadoraRPN.js"></script>
+</head>
+
+<body lang="es">
+    <header>
+        <h1 lang="es">Calculadora RPN</h1>
+    </header>
+    <article lang="es">
+        <h2>calculadora RPN V1</h2>
+        <section lang="es">
+            <h3>Pila:</h3>
+            <textarea lang="es" id="pila" rows="6" cols="20"></textarea>
+            <h3>Input:</h3>
+            <input lang="es" type="text" id="resultado" disabled />
+        </section>
+        <div>
+            <input type="button" value="^x" onClick="calculadora.potenciaX()" />
+            <input type="button" value="sin" onClick="calculadora.sin()" />
+            <input type="button" value="cos" onClick="calculadora.cos()" />
+            <input type="button" value="tan" onClick="calculadora.tan()" />
+        </div>
+        <div>
+            <input type="button" value="10^x" onClick="calculadora.diezElevadoA()" />
+            <input type="button" value="log" onClick="calculadora.base_e_log()" />
+            <input type="button" value="log10" onClick="calculadora.base_10_log()" />
+            <input type="button" value="exp" onClick="calculadora.exp()" />
+        </div>
+        <div>
+            <input type="button" value="n!" onClick="calculadora.factorial()" />
+            <input type="button" value="π" onClick="calculadora.pi()" />
+            <input type="button" value="e" onClick="calculadore.e()" />
+            <input type="button" value="√" onClick="calculadora.raiz()" />
+        </div>
+        <div>
+            <input type="button" value="↑" onClick="calculadora.shift()" />
+            <input type="button" value="CE" onClick="calculadora.clearUltimo()" />
+            <input type="button" value="C" onClick="calculadora.clear()" />
+            <input type="button" value="←" onClick="calculadora.erase()" />
+        </div>
+        <div>
+            <input type="button" value="7" onClick="calculadora.pulsa7()" />
+            <input type="button" value="8" onClick="calculadora.pulsa8()" />
+            <input type="button" value="9" onClick="calculadora.pulsa9()" />
+            <input type="button" value="*" onClick="calculadora.multiplicacion()" />
+        </div>
+        <div>
+            <input type="button" value="4" onClick="calculadora.pulsa4()" />
+            <input type="button" value="5" onClick="calculadora.pulsa5()" />
+            <input type="button" value="6" onClick="calculadora.pulsa6()" />
+            <input type="button" value="-" onClick="calculadora.resta()" />
+        </div>
+        <div>
+            <input type="button" value="1" onClick="calculadora.pulsa1()" />
+            <input type="button" value="2" onClick="calculadora.pulsa2()" />
+            <input type="button" value="3" onClick="calculadora.pulsa3()" />
+            <input type="button" value="+" onClick="calculadora.suma()" />
+        </div>
+        <div>
+            <input type="button" value="0" onClick="calculadora.pulsa0" />
+            <input type="button" value="." onClick="calculadora.coma()" />
+            <input type="button" value="ap" onClick="calculadora.apilar()" />
+            <input type="button" value="/" onClick="calculadora.division()" />
+        </div>
+    </article>
+    <footer>
+        <a href="http://validator.w3.org/check/referer" hreflang="en-us">
+            <img src="valid-html5-button.png" alt="¡HTML5 válido!" height="31" width="88" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="¡CSS Válido!" /></a>
+    </footer>
+</body>
+
+</html>

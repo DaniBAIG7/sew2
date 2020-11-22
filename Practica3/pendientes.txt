@@ -1,0 +1,5 @@
+-pasar el TAW para todas las calculadoras
+-css del ejercicio 8
+-css y dejar guapo el ejercicio 6
+-arreglar css de los cazafantasmas y sumar filas y columnas pero el número
+-poner etiquetas de validación funcionales a los .html

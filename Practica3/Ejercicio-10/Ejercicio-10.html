@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calulador valor medio</title>
+    <link rel="stylesheet" href="Ejercicio-10.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Ejercicio-10.js"></script>
+</head>
+<body onload="accionCalculator.cargar()">
+    <h1>CALCULADOR VALOR MEDIO DE ACCIONES</h1>
+    <select id="seleccion" type="text" list="value">
+        <option value="FB">Facebook</option>
+        <option value="MWCS">MarketWorks</option>
+    </select>
+    <button onClick = "accionCalculator.cargarDatos()">Calcular</button>
+    <h2>Valor medio:</h2>
+    <input id="valormedio" type="text" disabled>
+</body>
+</html>
