@@ -4,42 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculadora de Coordenadas</title>
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="Ejercicio6.css" />
     <script src="Ejercicio-6.js"></script>
 </head>
 
 <body lang="es">
     <h1 lang="es">Calculadora de Coordenadas</h1>
-    <h2 lang="es">Transformar coordenadas</h2>
-    <h3>Usando elipsoide WGS84</h3>
-    <article>
-        <div>
+
+    <article id="transformarcoordenadas">
+        <h2 lang="es">Transformar coordenadas</h2>
+        <h3>Usando elipsoide WGS84</h3>
+        <div class="latlon">
+            <h4>Latitud</h4>
+            <h4>Longitud</h4>
             <input type="text" id="coordenadasLatitud" enabled />
             <input type="text" id="coordenadasLongitud" enabled />
-            <button id="transformarcoordenadasLatLon" onclick="transformarCoordenadas.transformar_a_UTM()">Transformar a UTM</button>
         </div>
-
-        <div>
+        <button id="transformarcoordenadasLatLon" onclick="transformarCoordenadas.transformar_a_UTM()">Transformar a
+            UTM</button>
+        <div class="utm">
+            <h4>UTM X</h4>
+            <h4>UTM Y</h4>
+            <h4>UTM Zona</h4>
+            <h4>En hemisferio sur</h4>
             <input type="text" id="coordenadasUTMX" enabled />
             <input type="text" id="coordenadasUTMY" enabled />
             <input type="text" id="zone" enabled />
-            <input type="checkbox" id="hemisferiosur" value="Hemisferio Sur"/>
-            <button id="transformarcoordenadasUTM" onclick="transformarCoordenadas.transformar_a_LatLon()">Transformar a Latitud/Longitud</button>
+            <input type="checkbox" id="hemisferiosur" value="Hemisferio Sur" />
         </div>
-
+        <button id="transformarcoordenadasUTM" onclick="transformarCoordenadas.transformar_a_LatLon()">Transformar a
+            Latitud/Longitud</button>
     </article>
-    <h2 lang="es">Calcular distancia entre dos coordenadas</h2>
-    <article>
+
+    <article id="calculardistanciacoordenadas">
+        <h2 lang="es">Calcular distancia entre dos coordenadas</h2>
         <div lang="es" id="coordenada1">
+            <h4>Latitud coordenada 1</h4>
+            <h4>Longitud coordenada 1</h4>
             <input type="text" id="coordenada1Latitud" enabled />
             <input type="text" id="coordenada1Longitud" enabled />
         </div>
-        <div>
+        <div id="coordenada2" class="utm">
+            <h4>Latitud coordenada 2</h4>
+            <h4>Longitud coordenada 2</h4>
             <input type="text" id="coordenada2Latitud" enabled />
             <input type="text" id="coordenada2Longitud" enabled />
         </div>
-        <input id="calculardistancia" value="Calcular la distancia" type="button" onclick="calculadoraDistancia.calcularDistancia()"/>
-        <input id="resultado" type="text" disabled />
+        <section>
+            <input id="calculardistancia" value="Calcular la distancia" type="button"
+                onclick="calculadoraDistancia.calcularDistancia()" />
+            <input id="resultado" type="text" disabled />
+        </section>
     </article>
     <footer>
         <a href="http://validator.w3.org/check/referer" hreflang="en-us">

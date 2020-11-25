@@ -3,6 +3,8 @@ var miMapa = new Object();
 
 function initMap() {
   var centro = { lat: parseFloat(miMapa.latitud), lng: parseFloat(miMapa.longitud) };
+  console.log(centro.lat);
+  console.log(centro.lng);
   var mapaGeoposicionado = new google.maps.Map(document.getElementById('mapa'), {
     zoom: 8,
     center: centro,
@@ -31,10 +33,10 @@ class Meteo {
     this.apikey = "e90eab05f68b96a608bfb818bda27fe7";
     this.correcto = "Â¡Todo correcto! XML recibido de <a href='http://openweathermap.org/'>OpenWeatherMap</a>"
     this.idDataOutput = idDataOutput;
-    
+
   }
 
-  asignarDatos() {
+  mostrarDatos() {
     this.latitud = document.getElementById('latitud').value;
     this.longitud = document.getElementById('longitud').value;
     this.tipo = "&mode=xml";
@@ -48,95 +50,25 @@ class Meteo {
   }
 
   cargarDatos() {
-    let salida = this.idDataOutput;
-    $.ajax({
-      dataType: "xml",
-      url: this.url,
-      method: 'GET',
-      success: function (datos) {
+   
+    var datosMeteo;
 
-        console.log(datos);
-        //Presentación del archivo XML en modo texto
-        $("h5").text((new XMLSerializer()).serializeToString(datos));
+    fetch(this.url).then(response => response.json()).then(datos => datosMeteo = datos);
 
-        //Extracción de los datos contenidos en el XML
-        var totalNodos = $('*', datos).length; // cuenta los elementos de XML: son los nodos del árbol DOM de XML
-        var ciudad = $('city', datos).attr("name");
-        var longitud = $('coord', datos).attr("lon");
-        var latitud = $('coord', datos).attr("lat");
-        var pais = $('country', datos).text();
-        var amanecer = $('sun', datos).attr("rise");
-        var minutosZonaHoraria = new Date().getTimezoneOffset();
-        var amanecerMiliSeg1970 = Date.parse(amanecer);
-        amanecerMiliSeg1970 -= minutosZonaHoraria * 60 * 1000;
-        var amanecerLocal = (new Date(amanecerMiliSeg1970)).toLocaleTimeString("es-ES");
-        var oscurecer = $('sun', datos).attr("set");
-        var oscurecerMiliSeg1970 = Date.parse(oscurecer);
-        oscurecerMiliSeg1970 -= minutosZonaHoraria * 60 * 1000;
-        var oscurecerLocal = (new Date(oscurecerMiliSeg1970)).toLocaleTimeString("es-ES");
-        var temperatura = $('temperature', datos).attr("value");
-        var temperaturaMin = $('temperature', datos).attr("min");
-        var temperaturaMax = $('temperature', datos).attr("max");
-        var temperaturaUnit = $('temperature', datos).attr("unit");
-        var humedad = $('humidity', datos).attr("value");
-        var humedadUnit = $('humidity', datos).attr("unit");
-        var presion = $('pressure', datos).attr("value");
-        var presionUnit = $('pressure', datos).attr("unit");
-        var velocidadViento = $('speed', datos).attr("value");
-        var nombreViento = $('speed', datos).attr("name");
-        var direccionViento = $('direction', datos).attr("value");
-        var codigoViento = $('direction', datos).attr("code");
-        var nombreDireccionViento = $('direction', datos).attr("name");
-        var nubosidad = $('clouds', datos).attr("value");
-        var nombreNubosidad = $('clouds', datos).attr("name");
-        var visibilidad = $('visibility', datos).attr("value");
-        var precipitacionValue = $('precipitation', datos).attr("value");
-        var precipitacionMode = $('precipitation', datos).attr("mode");
-        var descripcion = $('weather', datos).attr("value");
-        var horaMedida = $('lastupdate', datos).attr("value");
-        var horaMedidaMiliSeg1970 = Date.parse(horaMedida);
-        horaMedidaMiliSeg1970 -= minutosZonaHoraria * 60 * 1000;
-        var horaMedidaLocal = (new Date(horaMedidaMiliSeg1970)).toLocaleTimeString("es-ES");
-        var fechaMedidaLocal = (new Date(horaMedidaMiliSeg1970)).toLocaleDateString("es-ES");
-        var icon = $('weather', datos).attr("icon");
-
-        var stringDatos = "<ul><li>Número de elementos del XML: " + totalNodos + "</li>";
-        stringDatos += "<li>Ciudad: " + ciudad + "</li>";
-        stringDatos += "<li>Longitud: " + longitud + " grados</li>";
-        stringDatos += "<li>Latitud: " + latitud + " grados</li>";
-        stringDatos += "<li>Paí­s: " + pais + "</li>";
-        stringDatos += "<li>Amanece a las: " + amanecerLocal + "</li>";
-        stringDatos += "<li>Oscurece a las: " + oscurecerLocal + "</li>";
-        stringDatos += "<li>Temperatura: " + temperatura + " grados Celsius</li>";
-        stringDatos += "<li>Temperatura mí­nima: " + temperaturaMin + " grados Celsius</li>";
-        stringDatos += "<li>Temperatura máxima: " + temperaturaMax + " grados Celsius</li>";
-        stringDatos += "<li>Temperatura (unidades): " + temperaturaUnit + "</li>";
-        stringDatos += "<li>Humedad: " + humedad + " " + humedadUnit + "</li>";
-        stringDatos += "<li>Presión: " + presion + " " + presionUnit + "</li>";
-        stringDatos += "<li>Velocidad del viento: " + velocidadViento + " metros/segundo</li>";
-        stringDatos += "<li>Nombre del viento: " + nombreViento + "</li>";
-        stringDatos += "<li>Dirección del viento: " + direccionViento + " grados</li>";
-        stringDatos += "<li>Código del viento: " + codigoViento + "</li>";
-        stringDatos += "<li>Nombre del viento: " + nombreDireccionViento + "</li>";
-        stringDatos += "<li>Nubosidad: " + nubosidad + "</li>";
-        stringDatos += "<li>Nombre nubosidad: " + nombreNubosidad + "</li>";
-        stringDatos += "<li>Visibilidad: " + visibilidad + " metros</li>";
-        stringDatos += "<li>Precipitación valor: " + precipitacionValue + "</li>";
-        stringDatos += "<li>Precipitación modo: " + precipitacionMode + "</li>";
-        stringDatos += "<li>Descripción: " + descripcion + "</li>";
-        stringDatos += "<li>Hora de la medida: " + horaMedidaLocal + "</li>";
-        stringDatos += "<li>Fecha de la medida: " + fechaMedidaLocal + "</li>";
-        stringDatos += "<img src=http://openweathermap.org/img/wn/" + icon + "@2x.png alt=\"icono del tiempo en Cangas del Narcea\"/>"
-
-        $(salida).html(stringDatos);
-      },
-      error: function () {
-        $("h3").html("¡Tenemos problemas! No puedo obtener XML de <a href='http://openweathermap.org'>OpenWeatherMap</a>");
-        $("h4").remove();
-        $("h5").remove();
-        $("p").remove();
-      }
-    });
+    $("#datosMeteo").append("<p>Latitud: " + this.datos.coord.lat + " grados</p>");
+    $("#datosMeteo").append("<p>Longitud: " + this.datos.coord.lon + " grados</p>");
+    $("#datosMeteo").append("<p>Temperatura: " + this.datos.main.temp + " grados Celsius</p>");
+    $("#datosMeteo").append("<p>Presión: " + this.datos.main.pressure + " milímetros</p>");
+    $("#datosMeteo").append("<p>Humedad: " + this.datos.main.humidity + "%</p>");
+    $("#datosMeteo").append("<p>Amanece a las: " + new Date(this.datos.sys.sunrise * 1000).toLocaleTimeString() + "</p>");
+    $("#datosMeteo").append("<p>Oscurece a las: " + new Date(this.datos.sys.sunset * 1000).toLocaleTimeString() + "</p>");
+    $("#datosMeteo").append("<p>Dirección del viento: " + this.datos.wind.deg + "  grados</p>");
+    $("#datosMeteo").append("<p>Velocidad del viento: " + this.datos.wind.speed + " metros/segundo</p>");
+    $("#datosMeteo").append("<p>Hora de la medida: " + new Date(this.datos.dt * 1000).toLocaleTimeString() + "</p>");
+    $("#datosMeteo").append("<p>Fecha de la medida: " + new Date(this.datos.dt * 1000).toLocaleDateString() + "</p>");
+    $("#datosMeteo").append("<p>Visibilidad: " + this.datos.visibility + " metros</p>");
+    $("#datosMeteo").append("<p>Nubosidad: " + this.datos.clouds.all + " %</p>");
+    $("#datosMeteo").append("<img src=http://openweathermap.org/img/wn/" + this.datos.weather[0].icon + "@2x.png alt=\"icono del tiempo en localización seleccionada\"/>");
   }
   crearElemento(tipoElemento, texto, insertarAntesDe) {
     // Crea un nuevo elemento modificando el árbol DOM

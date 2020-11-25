@@ -1,0 +1,53 @@
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    color: #ca4b4b;
+}
+
+h3 {
+    margin-left: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25em;
+}
+
+h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #a4c2d3;
+}
+
+article div {
+    margin-left: 1.7em;
+}
+
+button {
+    margin-left: 1.7em;
+}
+
+article#transformarcoordenadas div.latlon{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+article#transformarcoordenadas div.utm{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+article#calculardistanciacoordenadas div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section {
+    margin-left: 1.5em;
+}

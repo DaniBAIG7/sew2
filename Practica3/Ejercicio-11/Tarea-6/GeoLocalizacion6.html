@@ -13,13 +13,11 @@
     <div>
         <input type="text" id="latitud" enabled/>
         <input type="text" id="longitud" enabled/>
-        <button onclick="informacionMeteo.asignarDatos()">Mostrar</button>
+        <button onclick="informacionMeteo.mostrarDatos()">Mostrar</button>
     </div>
     <div id="mapa"></div>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&callback=miMapa.initMap"></script>
-    <article id="datosMeteo">
-        <h2>Datos meteorológicos de la ubicación</h2>
-    </article>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU"></script>
+    <section id="datosMeteo"></section>
 
     <footer>
         <a href="http://validator.w3.org/check/referer" hreflang="en-us">
