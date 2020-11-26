@@ -1,54 +1,115 @@
+/*Especificidad 001*/
 body {
-    background-color: rgb(142, 215, 238);
-    text-align: justify;
+      font: 400 1.2em Tahoma; /*Familia sans-serif*/
+      line-height: 1.8;
+      margin: 1em;
+      background-color: #051c3b;
+      color:#bdc7d4;
 }
 
-h1 {
-    font: bold 4em Helvetica;
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 0.02em 0em #000000, 0.02em 0em #000000, 0em -0.02em #000000, 0em 0.02em #000000, -0.02em -0.02em #000000, 0.02em 0.02em #000000, -0.02em 0.02em #000000, 0.02em -0.02em #000000;
-    margin-bottom: 1em;
-}
-
-article {
-    font: 0.9em Helvetica;
-    color: rgb(233, 234, 235);
-    background-color: rgb(22, 51, 70);
-    border-radius: 1em;
-    padding: 1em;
-    margin-top: 4em;
-}
-
-h2 {
-    font: bold 3em Helvetica;
-    color: white;
-    text-shadow: -0.1em 0em #7a1414;
-}
-
-h3 {
-    font: bold 2em Helvetica;
-    color: #71a8db;
-}
-
-h4 {
-    font: bold 1.1em Helvetica;
-    text-decoration: underline;
-    color: #8b97a1
-}
-
+/*Especificidad 001*/
 a {
-    color: #cc2626;
+  color: #89dd77;
 }
 
-li ul {
-    list-style: none;
-    display: flex;
+/*Especificidad 001*/
+nav {
+  display: flex;
+  background-color: #020f20;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  font-size: 1.2em;
+  justify-content: space-evenly;
 }
 
-li img {
-    margin-top: 1.2em;
-    margin-right: 3em;
-    width: 24em;
-    height: 15em;
+/*Especificidad 002*/
+nav a {
+  color: #89dd77;
+  text-shadow: 0.02em 0.02em #f40808;
+  text-decoration: none;
 }
+
+/*Especificidad 001*/
+header {
+  border-color: #000000;
+  border-radius: 0.02em;
+  background-image: url("../multimedia/ghostbusters.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+/*Especificidad 001*/
+p {
+  text-align: justify;
+}
+
+/*Especificidad 001*/
+h1 {
+      font: bold 4em Helvetica;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 0.02em 0em #000000, 0.02em 0em #000000, 0em -0.02em #000000, 0em 0.02em #000000, -0.02em -0.02em #000000, 0.02em 0.02em #000000, -0.02em 0.02em #000000, 0.02em -0.02em #000000, -0.05em 0em #f40808, 0.05em 0em #89dd77;
+      color: #ffffff;
+  }
+
+/*Especificidad 001*/
+h2 {
+
+    font: bold 2em Helvetica;
+    text-transform: uppercase;
+
+    text-shadow: 0.02em 0em #f40808, -0.02em 0em #f40808, 0em -0.02em #f40808, 0em 0.02em #f40808;
+    color: #ffffff;
+  }
+
+/*Especificidad 001*/
+footer {
+  margin-top: 2.5em;
+  display: flex;
+}
+
+/*Especificidad 002*/
+footer img {
+  height: 3em;
+  width: 3em;
+}
+
+/*Especificidad 001*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /*Especificidad 001*/
+  th{
+    border: 0.02em solid #f40808;
+    padding: 2em;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
+  /*Especificidad 001*/
+  td {
+    padding: 1em;
+    border: 0.02em solid #f40808;
+    text-align: center;
+  }
+  
+  /*Especificidad 001*/
+  caption {
+    font: bold 1.5em Helvetica;
+    padding: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0.01em 0em #f40808, -0.01em 0em #f40808, 0em -0.01em #f40808, 0em 0.01em #f40808;
+    color: #ffffff;
+    border: 0.02em solid #f40808;
+    
+  }

@@ -34,6 +34,7 @@ var pila = new PilaLIFO("Pila LIFO");
 class Calculadora{
     constructor(){
         this.memo = null;
+        this.pantalla = "";
     }
 
     suma(){
@@ -68,71 +69,27 @@ class Calculadora{
         }
     }
 
-    coma() {
-        var text = document.getElementById('resultado');
-        text.value += '.';
-    }
-
-    pulsa1() {
-        var text = document.getElementById('resultado');
-        text.value += '1';
-    }
-
-    pulsa2() {
-        var text = document.getElementById('resultado');
-        text.value += '2';
-    }
-    
-    pulsa3() {
-        var text = document.getElementById('resultado');
-        text.value += '3';
-    }
-    
-    pulsa4() {
-        var text = document.getElementById('resultado');
-        text.value += '4';
-    }
-
-    pulsa5() {
-        var text = document.getElementById('resultado');
-        text.value += '5';
-    }
-
-    pulsa6() {
-        var text = document.getElementById('resultado');
-        text.value += '6';
-    }
-
-    pulsa7() {
-        var text = document.getElementById('resultado');
-        text.value += '7';
-    }
-
-    pulsa8() {
-        var text = document.getElementById('resultado');
-        text.value += '8';
-    }
-
-    pulsa9() {
-        var text = document.getElementById('resultado');
-        text.value += '9';
-    }
-
-    pulsa0() {
-        var text = document.getElementById('resultado');
-        text.value += '0';
+    digito(digito) {
+        thiis.pantalla += digito;
+        this.refresh();
     }
 
     apilar() {
-        var text = document.getElementById('resultado');
+        var text = this.pantalla;
         let valorAApilar = parseFloat(text.value);
         pila.apilar(valorAApilar);
-        text.value = '';
+        this.pantalla = "";
+        this.refresh();
     }
 
-    clear() {
+    borrar() {
         pila.clear();
-        document.getElementById('resultado').value = '';
+        this.pantalla = "";
+        this.refresh();
+    }
+
+    refresh() {
+        document.getElementById("resultado").value = this.pantalla;
     }
 }
 
@@ -142,8 +99,9 @@ class CalculadoraRPN extends Calculadora {
     }
 
     pi() {
-        var text = document.getElementById('resultado');
+        var text = this.pantalla;
         text.value += Math.PI.toString();
+        this.refresh();
     }
 
     shift() {
@@ -156,8 +114,9 @@ class CalculadoraRPN extends Calculadora {
     }
 
     erase() {
-        var valor = document.getElementById("resultado").value;
-        document.getElementById("resultado").value = valor.substring(0, valor.length - 1);
+        var valor = this.pantalla;
+        this.pantalla = valor.substring(0, valor.length - 1);
+        this.refresh();
     }
 
     potenciaX() {
@@ -232,8 +191,9 @@ class CalculadoraRPN extends Calculadora {
     }
 
     e() {
-        var text = document.getElementById('resultado');
+        var text = this.pantalla;
         text.value += Math.exp(1);
+        this.refresh();
     }
     
     base_10_log() {
@@ -263,11 +223,12 @@ class CalculadoraRPN extends Calculadora {
     }
 
     getLastDigit() {
-        return document.getElementById('resultado').value;
+        return this.pantalla;
     }
 
     removeLastDigit() {
-        document.getElementById('resultado').value = '';
+        this.pantalla = '';
+        refresh();
     }
 }
 

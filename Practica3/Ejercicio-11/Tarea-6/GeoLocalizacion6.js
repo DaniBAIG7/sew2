@@ -50,25 +50,33 @@ class Meteo {
   }
 
   cargarDatos() {
-   
-    var datosMeteo;
 
-    fetch(this.url).then(response => response.json()).then(datos => datosMeteo = datos);
+    var meteo = this;
 
-    $("#datosMeteo").append("<p>Latitud: " + this.datos.coord.lat + " grados</p>");
-    $("#datosMeteo").append("<p>Longitud: " + this.datos.coord.lon + " grados</p>");
-    $("#datosMeteo").append("<p>Temperatura: " + this.datos.main.temp + " grados Celsius</p>");
-    $("#datosMeteo").append("<p>Presión: " + this.datos.main.pressure + " milímetros</p>");
-    $("#datosMeteo").append("<p>Humedad: " + this.datos.main.humidity + "%</p>");
-    $("#datosMeteo").append("<p>Amanece a las: " + new Date(this.datos.sys.sunrise * 1000).toLocaleTimeString() + "</p>");
-    $("#datosMeteo").append("<p>Oscurece a las: " + new Date(this.datos.sys.sunset * 1000).toLocaleTimeString() + "</p>");
-    $("#datosMeteo").append("<p>Dirección del viento: " + this.datos.wind.deg + "  grados</p>");
-    $("#datosMeteo").append("<p>Velocidad del viento: " + this.datos.wind.speed + " metros/segundo</p>");
-    $("#datosMeteo").append("<p>Hora de la medida: " + new Date(this.datos.dt * 1000).toLocaleTimeString() + "</p>");
-    $("#datosMeteo").append("<p>Fecha de la medida: " + new Date(this.datos.dt * 1000).toLocaleDateString() + "</p>");
-    $("#datosMeteo").append("<p>Visibilidad: " + this.datos.visibility + " metros</p>");
-    $("#datosMeteo").append("<p>Nubosidad: " + this.datos.clouds.all + " %</p>");
-    $("#datosMeteo").append("<img src=http://openweathermap.org/img/wn/" + this.datos.weather[0].icon + "@2x.png alt=\"icono del tiempo en localización seleccionada\"/>");
+    function cargar(datos) {
+      this.datos = datos;
+    }
+
+    fetch(this.url).then(response => response.json()).then(datos => cargar(datos).bind(meteo));
+
+    if (this.datos == null) {
+      $("#datosMeteo").append("<p>No se han cargado los datos correctamente</p>");
+    } else {
+      $("#datosMeteo").append("<p>Latitud: " + this.datos.lat + " grados</p>");
+      $("#datosMeteo").append("<p>Longitud: " + this.datos.lon + " grados</p>");
+      $("#datosMeteo").append("<p>Zona Horaria: " + this.timezone + "</p>");
+      $("#datosMeteo").append("<p>Temperatura: " + this.datos.main.temp + " grados Celsius</p>");
+      $("#datosMeteo").append("<p>Presión: " + this.datos.current.pressure + " milímetros</p>");
+      $("#datosMeteo").append("<p>Humedad: " + this.datos.current.humidity + "%</p>");
+      $("#datosMeteo").append("<p>Amanece a las: " + new Date(this.datos.current.sunrise * 1000).toLocaleTimeString() + "</p>");
+      $("#datosMeteo").append("<p>Oscurece a las: " + new Date(this.datos.current.sunset * 1000).toLocaleTimeString() + "</p>");
+      $("#datosMeteo").append("<p>Dirección del viento: " + this.datos.current.wind_deg + "  grados</p>");
+      $("#datosMeteo").append("<p>Velocidad del viento: " + this.datos.current.wind_speed + " metros/segundo</p>");
+      $("#datosMeteo").append("<p>Visibilidad: " + this.datos.current.visibility + " metros</p>");
+      $("#datosMeteo").append("<p>Nubosidad: " + this.datos.current.clouds.all + " %</p>");
+      $("#datosMeteo").append("<img src=http://openweathermap.org/img/wn/" + this.datos.current.weather[0].icon + "@2x.png alt=\"icono del tiempo en localización seleccionada\"/>");
+    }
+
   }
   crearElemento(tipoElemento, texto, insertarAntesDe) {
     // Crea un nuevo elemento modificando el árbol DOM
