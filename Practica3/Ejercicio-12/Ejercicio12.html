@@ -3,12 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>API File: Leer un archivo de texto</title>
+    <title>Inspección de archivos</title>
+    <link rel="stylesheet" href="Ejercicio12.css"/>
     <script src="Ejercicio12.js"></script>
 </head>
 
 <body>
-    <p>API File: Selecionar varios archivos de la máquina cliente</p>
+    <h1>Inspección de Archivos</h1>
+    <p>Elige uno o varios archivos de la máquina local.
+        Si este archivo es un .json, un .xml o un .txt, en el
+        detalle de los archivos (más abajo) además de información
+        como el peso, la última fecha de modificación o el título,
+        se mostrará el contenido del mismo.
+    </p>
+    <h2>Seleccionar los archivos</h2>
     <p><input id="subirArchivos" type="file" name="Archivos" onchange="fm.mostrarArchivos()" multiple></p>
     <p>Archivos seleccionados: <span id="numero">0</span></p>
     <p>Tamaño total: <span id="tamaño">0</span></p>

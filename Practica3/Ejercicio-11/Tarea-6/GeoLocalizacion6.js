@@ -33,12 +33,14 @@ class Meteo {
     this.apikey = "e90eab05f68b96a608bfb818bda27fe7";
     this.correcto = "Â¡Todo correcto! XML recibido de <a href='http://openweathermap.org/'>OpenWeatherMap</a>"
     this.idDataOutput = idDataOutput;
-
+    this.datos = "";
   }
 
   mostrarDatos() {
-    this.latitud = document.getElementById('latitud').value;
-    this.longitud = document.getElementById('longitud').value;
+    // this.latitud = document.getElementById('latitud').value;
+    // this.longitud = document.getElementById('longitud').value;
+    this.latitud = $("#latitud").val();
+    this.longitud = $("#longitud").val();
     this.tipo = "&mode=xml";
     this.unidades = "&units=metric";
     this.idioma = "&lang=es";
@@ -49,23 +51,44 @@ class Meteo {
     this.cargarDatos();
   }
 
+  meterDatos(datos) {
+    this.datos = datos;
+  }
+
   cargarDatos() {
+    var self = this;
 
-    var meteo = this;
+    //fetch(this.url).then(response => response.json()).then(datos => self.datos = datos);
 
-    function cargar(datos) {
-      this.datos = datos;
-    }
+    
 
-    fetch(this.url).then(response => response.json()).then(datos => cargar(datos).bind(meteo));
+    $.ajax({
+      dataType: "json",
+      url: this.url,
+      method: 'GET',
+      success: function(datos) {
+        self.datos = datos;
+        self.paintDatos();
+      },
+      error: function (xhr, status, error) {
+        var err = eval("(" + xhr.responseText + ")");
+        alert("No se han cargado los datos correctamente");
+      }
+    });
 
-    if (this.datos == null) {
+    
+
+  }
+
+  paintDatos() {
+    if (this.datos == "") {
       $("#datosMeteo").append("<p>No se han cargado los datos correctamente</p>");
     } else {
+      console.log(this.datos);
       $("#datosMeteo").append("<p>Latitud: " + this.datos.lat + " grados</p>");
       $("#datosMeteo").append("<p>Longitud: " + this.datos.lon + " grados</p>");
       $("#datosMeteo").append("<p>Zona Horaria: " + this.timezone + "</p>");
-      $("#datosMeteo").append("<p>Temperatura: " + this.datos.main.temp + " grados Celsius</p>");
+      $("#datosMeteo").append("<p>Temperatura: " + this.datos.current.temp + " grados Celsius</p>");
       $("#datosMeteo").append("<p>Presión: " + this.datos.current.pressure + " milímetros</p>");
       $("#datosMeteo").append("<p>Humedad: " + this.datos.current.humidity + "%</p>");
       $("#datosMeteo").append("<p>Amanece a las: " + new Date(this.datos.current.sunrise * 1000).toLocaleTimeString() + "</p>");
@@ -76,8 +99,8 @@ class Meteo {
       $("#datosMeteo").append("<p>Nubosidad: " + this.datos.current.clouds.all + " %</p>");
       $("#datosMeteo").append("<img src=http://openweathermap.org/img/wn/" + this.datos.current.weather[0].icon + "@2x.png alt=\"icono del tiempo en localización seleccionada\"/>");
     }
-
   }
+
   crearElemento(tipoElemento, texto, insertarAntesDe) {
     // Crea un nuevo elemento modificando el árbol DOM
     // El elemnto creado es de 'tipoElemento' con un 'texto' 
