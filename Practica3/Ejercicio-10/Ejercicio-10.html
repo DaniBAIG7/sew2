@@ -9,9 +9,14 @@
 </head>
 <body onload="accionCalculator.cargar()">
     <h1>CALCULADOR VALOR MEDIO DE ACCIONES</h1>
-    <select id="seleccion" type="text" list="value">
+    <h5></h5>
+    <select id="seleccion" type="text" list="value" onchange="accionCalculator.cargar()">
         <option value="FB">Facebook</option>
-        <option value="MWCS">MarketWorks</option>
+        <option value="AAPL">Apple</option>
+        <option value="TSLA">Tesla</option>
+        <option value="JNJ">Johnson & Johnson</option>
+        <option value="PFE">Pfizer</option>
+        <option value="UNH">UnitedHealth Group</option>
     </select>
     <button onClick = "accionCalculator.cargarDatos()">Calcular</button>
     <h2>Valor medio:</h2>

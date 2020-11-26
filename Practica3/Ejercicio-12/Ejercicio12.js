@@ -33,26 +33,24 @@ class FileManager {
     }
 
     leerArchivo(file) {
-        //Solamente toma un archivo
-        //var archivo = document.getElementById("archivoTexto").file;
         var archivo = file;
-        nombre.innerText = "Nombre del archivo: " + archivo.name;
-        tamaño.innerText = "Tamaño del archivo: " + archivo.size + " bytes";
-        tipo.innerText = "Tipo del archivo: " + archivo.type;
-        ultima.innerText = "Fecha de la última modificación: " + archivo.lastModifiedDate;
-        contenido.innerText = "Contenido del archivo de texto:"
-        //Solamente admite archivos de tipo texto
+        let fileText = "<article id=\""+archivo.name+"\"><h2>Archivo: "+archivo.name+"</h2></article>"
+        document.getElementById('filesInfo').innerHTML += fileText;
+        document.getElementById(archivo.name).innerHTML += "<p>Nombre del archivo: " + archivo.name + "</p>";
+        document.getElementById(archivo.name).innerHTML += "<p>Tamaño del archivo: " + archivo.size + "</p>";
+        document.getElementById(archivo.name).innerHTML += "<p>Tipo del archivo: " + archivo.type + "</p>";
+        document.getElementById(archivo.name).innerHTML += "<p>Fecha del archivo: " + archivo.lastModifiedDate + "</p>";
+        
         var tipoTexto = /text.*/;
         var tipoJson = /json.*/;
         var tipoXml = /xml.*/;
         if (archivo.type.match(tipoTexto) || archivo.type.match(tipoJson) || archivo.type.match(tipoXml)) {
+            document.getElementById(archivo.name).innerHTML += "<h3>Texto del contenido:</h3>"
+            document.getElementById(archivo.name).innerHTML += "<span id=\"contenido" + archivo.name + "\">Contenido del archivo: " + archivo.name + "</span>";
             var lector = new FileReader();
             lector.onload = function (evento) {
-                //El evento "onload" se lleva a cabo cada vez que se completa con éxito una operación de lectura
-                //La propiedad "result" es donde se almacena el contenido del archivo
-                //Esta propiedad solamente es válida cuando se termina la operación de lectura
                 
-                areaVisualizacion.innerText = lector.result;
+                document.getElementById("contenido" + archivo.name).innerText = lector.result;
             }
             lector.readAsText(archivo);
         }

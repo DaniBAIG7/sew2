@@ -6,15 +6,15 @@ h1 {
 
 h2 {
     font: Verdana sans-serif;
-    font-size: x-small;
+    font-size: small;
     font-style: italic;
     text-align: center;
     color: #FFFFFF;
 }
 
 h3 {
-    font: Consolas;
-    font-size: x-small;
+    font: Verdana sans-serif;
+    font-size: small;
     color: #000000;
 }
 
@@ -22,9 +22,25 @@ div input {
     border-radius: 0.5em;
     height: 2em;
     width: 3em;
-    min-width: fit-content;
+    min-width: max-content;
     margin: 0.2em;
-    background-color: #5f6264;
+    background-color: #515253;
+    color: #FFFFFF;
+}
+
+.digito {
+    background-color: #b4bec2;
+    color: #000000;
+}
+
+.management {
+    background-color: #0077ff;
+    color: #FFFFFF;
+}
+
+.operador {
+    background-color: #e9dc22f3;
+    color: #000000;
 }
 
 textarea {
@@ -43,6 +59,7 @@ section input {
     width: 13.5em;
     margin-left: 1em;
     margin-right: 1em;
+    margin-bottom: 1em;
 }
 
 section h3 {
@@ -70,8 +87,8 @@ div {
     margin-left: auto;
     margin-right: auto;
     min-width: fit-content;
-    display: inline;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 

@@ -9,7 +9,7 @@
     <script src="Ejercicio7.js"></script>
 </head>
 
-<body>
+<body onload="commandManager.hideTitleManagement()">
 
     <header>
         <h1 id="encabezadoprincipal">Los cazafantasmas</h1>
@@ -24,16 +24,16 @@
         <a href="infopag.html">Sobre la página</a>
     </nav>
     
-    <button id="ocultar">Oculta los párrafos</button>
-    <button id="mostrar">Muestra los párrafos</button>
-    <button id="mostrarCambiarTitulo">Cambiar encabezado principal</button>
-    <button id="añadirentradabtn">Añadir nueva entrada</button>
-    <button id="eliminarnuevasentradas">Eliminar nuevas entradas</button>
-    <button id="recorrerDOM">Recorrer DOM</button>
+    <button id="ocultar" onclick="commandManager.clickOcultarParrafos()">Oculta los párrafos</button>
+    <button id="mostrar" onclick="commandManager.clickMostrarParrafos()">Muestra los párrafos</button>
+    <button id="mostrarCambiarTitulo" onclick="commandManager.clickMostrarCambiarTitulo()">Cambiar encabezado principal</button>
+    <button id="añadirentradabtn" onclick="commandManager.clickAñadirEntrada()">Añadir nueva entrada</button>
+    <button id="eliminarnuevasentradas" onclick="commandManager.clickEliminarNuevasEntradas()">Eliminar nuevas entradas</button>
+    <button id="recorrerDOM" onclick="commandManager.clickRecorrerDOM()">Recorrer DOM</button>
 
     <br>
     <input id="cambiartitulotxt" type="text" enabled/>
-    <button id="cambiartitulobtn">→</button>
+    <button id="cambiartitulobtn" onclick="commandManager.clickCambiarTitulo()">→</button>
     <h2>¡Bienvenido!</h2>
     
     <p>
@@ -85,8 +85,10 @@
     </ul>
     
     <br>
-    <button id="sumarfilas">Combinar filas de la tabla</button>
-    <button id="sumarcolumnas">Combinar columnas de la tabla</button>
+    <button id="sumarfilas" onclick="commandManager.clickSumarFilas()">Combinar filas de la tabla</button>
+    <input type="text" id="numeroFilas" disabled/>
+    <button id="sumarcolumnas" onclick="commandManager.clickSumarColumnas()">Combinar columnas de la tabla</button>
+    <input type="text" id="numeroColumnas" disabled/>
     <table>
         <caption>Fechas de estreno de Cazafantasmas en diferentes países</caption>
         <thead>

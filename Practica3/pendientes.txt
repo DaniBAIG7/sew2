@@ -1,3 +1,4 @@
 -pasar el TAW para todas las calculadoras
--arreglar css de los cazafantasmas y sumar filas y columnas pero el número
+-cambiar suma de columnas
 -poner etiquetas de validación funcionales a los .html
+-modificar calculadora RPN (estilo y demás)
