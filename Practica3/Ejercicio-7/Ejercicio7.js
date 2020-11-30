@@ -57,21 +57,13 @@ class ButtonBehaviours {
     }
 
     clickSumarFilas() {
-        let i = 0;
-        $("table tr").each(function() {
-            i++;
-        })
         $("#numeroFilas").show();
-        document.getElementById("numeroFilas").value = i;
+        document.getElementById("numeroFilas").value = $('tr').length;
     }
 
     clickSumarColumnas() {
-        let i = 0;
-        $("table td").each(function() {
-            i++;
-        })
         $("#numeroColumnas").show();
-        document.getElementById("numeroColumnas").value = i;
+        document.getElementById("numeroColumnas").value = $('tr').children().length/$('tr').length;
     }
 }
 
