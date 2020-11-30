@@ -2,7 +2,7 @@ h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 4em;
     font-weight: bold;
-    color: #000000;
+    color: #46392b;
 }
 
 h2 {
@@ -33,7 +33,7 @@ article div {
 
 label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #FFFFFF;
+    color: #000000;
     font-weight: bold;
     display: block;
 }
