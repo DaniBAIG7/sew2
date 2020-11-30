@@ -113,3 +113,7 @@ table {
     border: 0.02em solid #f40808;
     
   }
+
+  label {
+    color: #FFFFFF;
+  }

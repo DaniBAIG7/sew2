@@ -6,6 +6,7 @@ class ButtonBehaviours {
     }
 
     hideTitleManagement() {
+        $("#labeltitulo").hide();
         $("#cambiartitulotxt").hide();
         $("#cambiartitulobtn").hide();
     }
@@ -19,6 +20,7 @@ class ButtonBehaviours {
     }
 
     clickMostrarCambiarTitulo() {
+        $("#labeltitulo").show();
         $("#cambiartitulotxt").show();
         $("#cambiartitulobtn").show();
     }
