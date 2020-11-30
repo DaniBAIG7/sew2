@@ -32,6 +32,7 @@
     <button id="recorrerDOM" onclick="commandManager.clickRecorrerDOM()">Recorrer DOM</button>
 
     <br>
+    <label id="labeltitulo" for="cambiartitulotxt">Nuevo título: </label>
     <input id="cambiartitulotxt" type="text"/>
     <button id="cambiartitulobtn" onclick="commandManager.clickCambiarTitulo()">→</button>
     <h2>¡Bienvenido!</h2>
@@ -86,8 +87,10 @@
     
     <br>
     <button id="sumarfilas" onclick="commandManager.clickSumarFilas()">Contar filas de la tabla</button>
+    <label for="numeroFilas">Número de filas: </label>
     <input type="text" id="numeroFilas" disabled/>
     <button id="sumarcolumnas" onclick="commandManager.clickSumarColumnas()">Contar columnas de la tabla</button>
+    <label for="numeroColumnas">Número de columnas: </label>
     <input type="text" id="numeroColumnas" disabled/>
     <table>
         <caption>Fechas de estreno de Cazafantasmas en diferentes países</caption>
