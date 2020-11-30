@@ -1,11 +1,10 @@
 h1 {
-    font: Verdana sans-serif 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     padding: 1.5em;
 }
 
 h2 {
-    font: Verdana sans-serif;
     font-size: small;
     font-style: italic;
     color: #FFFFFF;
