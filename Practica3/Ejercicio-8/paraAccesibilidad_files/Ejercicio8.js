@@ -50,7 +50,7 @@ class Meteo {
         $("#" + this.idoutput).append("<p>Descripción: " + this.datos.weather[0].description + "</p>");
         $("#" + this.idoutput).append("<p>Visibilidad: " + this.datos.visibility + " metros</p>");
         $("#" + this.idoutput).append("<p>Nubosidad: " + this.datos.clouds.all + " %</p>");
-        $("#" + this.idoutput).append("<img src=http://openweathermap.org/img/wn/" + this.datos.weather[0].icon + "@2x.png alt=\"icono del tiempo en Cangas del Narcea\"/>");
+        $("#" + this.idoutput).append("<img src=http://openweathermap.org/img/wn/" + this.datos.weather[0].icon + "@2x.png alt=\"icono del tiempo en " + this.ciudad + "\"/>");
     }
 }
 
