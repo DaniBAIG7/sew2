@@ -8,9 +8,12 @@
     <script src="./Ejercicio-10.js"></script>
 </head>
 <body onload="accionCalculator.cargar()">
-    <h1>CALCULADOR VALOR MEDIO DE ACCIONES</h1>
-    <h5></h5>
-    <select id="seleccion" type="text" list="value" onchange="accionCalculator.cargar()">
+    <header>
+        <h1>CALCULADOR VALOR MEDIO DE ACCIONES</h1>
+        <h2>Selecciona una compañía y dale al botón para calcular el valor medio de sus acciones en el registro de QUANDL</h2>
+    </header>
+    <label for="seleccion">Compañía:</label>
+    <select id="seleccion" onchange="accionCalculator.cargar()">
         <option value="FB">Facebook</option>
         <option value="AAPL">Apple</option>
         <option value="TSLA">Tesla</option>
@@ -19,7 +22,7 @@
         <option value="UNH">UnitedHealth Group</option>
     </select>
     <button onClick = "accionCalculator.cargarDatos()">Calcular</button>
-    <h2>Valor medio:</h2>
+    <label for="valormedio">Valor medio de las acciones ($): </label>
     <input id="valormedio" type="text" disabled>
 </body>
 </html>
