@@ -3,22 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
     <title>Calculadora RPN</title>
     <link rel="stylesheet" href="./CalculadoraRPN.css" />
     <script src="./CalculadoraRPN.js"></script>
 </head>
 
-<body lang="es">
+<body>
     <header>
-        <h1 lang="es">Calculadora RPN</h1>
+        <h1>Calculadora RPN</h1>
     </header>
-    <article lang="es">
+    <article>
         <h2>calculadora RPN V1</h2>
-        <section lang="es">
+        <p>Calculadora que ofrece la resolución de operaciones matemáticas usando
+            la reverse polish notation.
+        </p>
+        <section>
             <h3>Pila:</h3>
-            <textarea lang="es" id="pila" rows="6" cols="20"></textarea>
+            <textarea id="pila" rows="6" cols="20"></textarea>
+            <label for="pila">
+                Pantalla de la pila
+            </label>
             <h3>Input:</h3>
             <input lang="es" type="text" id="resultado" disabled />
+            <label for="resultado">
+                Pantalla de los input del usuario
+            </label>
         </section>
         <div>
             <input type="button" value="^x" onClick="calculadora.potenciaX()" />
@@ -58,7 +68,7 @@
             <input type="button" value="0" class="digito" onClick="calculadora-digito(0)" />
             <input type="button" value="." class="digito" onClick="calculadora-digito('.')" />
             <input type="button" value="ap" class="operador" onClick="calculadora.apilar()" />
-            <input type="button" value="/" class="operador "onClick="calculadora.division()" />
+            <input type="button" value="/" class="operador" onClick="calculadora.division()" />
         </div>
     </article>
     <footer>
