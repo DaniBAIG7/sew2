@@ -24,6 +24,11 @@ label {
     display: none;
 }
 
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
 div input {
     border-radius: 0.5em;
     height: 2em;
@@ -40,8 +45,8 @@ div input {
 }
 
 .management {
-    background-color: #0077ff;
-    color: #FFFFFF;
+    background-color: #00b5fc;
+    color: #000000;
 }
 
 .operador {
