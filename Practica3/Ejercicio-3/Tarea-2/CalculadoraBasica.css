@@ -1,12 +1,11 @@
 h1 {
-    font: Verdana sans-serif 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     padding: 1.5em;
 }
 
 h2 {
-    font: Verdana sans-serif;
-    font-size: x-small;
+    font-size: small;
     font-style: italic;
     text-align: center;
     color: #FFFFFF;
@@ -15,18 +14,15 @@ h2 {
 input {
     background-color: #719e65;
     height: 2.5em;
-    width: 10.4em;
-}
-
-input[id="resultado"] {
-    margin-bottom: 1em;
+    width: 13.5em;
+    margin: 1em;
 }
 
 article {
-    padding: 1.5em;
+    padding: 0.3em;
     background-color: #595b5c;
     border-radius: 1em;
-    width: 11em;
+    width: 15em;
     text-align: center;
     align-self: center;
     margin-left: auto;
@@ -45,13 +41,17 @@ div {
     margin-left: auto;
     margin-right: auto;
     width: 10.4em;
-    display: inline;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
 }
 
 div input {
     height: 2em;
     width: 2.5em;
     background-color: #9da2a5;
+    margin: 0.2em;
+    color: #000000;
 }
 
 .operator {

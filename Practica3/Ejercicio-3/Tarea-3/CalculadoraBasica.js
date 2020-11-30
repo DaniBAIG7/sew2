@@ -2,115 +2,74 @@
 class Calculadora{
     constructor(){
         this.memo = null;
+        this.pantalla = "";
     }
 
     suma(){
-        var text = document.getElementById('resultado');
-        text.value += "+";
+        this.pantalla += "+";
+        this.refresh();
     }
 
     resta() {
-        var text = document.getElementById('resultado');
-        text.value += '-';
+        this.pantalla += '-';
+        this.refresh();
     }
 
     multiplicacion() {
-        var text = document.getElementById('resultado');
-        text.value += '*';
+        this.pantalla += '*';
+        this.refresh();
     }
 
     division() {
-        var text = document.getElementById('resultado');
-        text.value += '/';
+        this.pantalla += '/';
+        this.refresh();
     }
 
-    coma() {
-        var text = document.getElementById('resultado');
-        text.value += '.';
+    borrar() {
+        this.pantalla = '';
+        this.refresh();
     }
 
-    clear() {
-        document.getElementById('resultado').value = '';
+    digito(digito) {
+        this.pantalla += digito;
+        this.refresh();
     }
 
-    pulsa1() {
-        var text = document.getElementById('resultado');
-        text.value += '1';
-    }
-
-    pulsa2() {
-        var text = document.getElementById('resultado');
-        text.value += '2';
-    }
-    
-    pulsa3() {
-        var text = document.getElementById('resultado');
-        text.value += '3';
-    }
-    
-    pulsa4() {
-        var text = document.getElementById('resultado');
-        text.value += '4';
-    }
-
-    pulsa5() {
-        var text = document.getElementById('resultado');
-        text.value += '5';
-    }
-
-    pulsa6() {
-        var text = document.getElementById('resultado');
-        text.value += '6';
-    }
-
-    pulsa7() {
-        var text = document.getElementById('resultado');
-        text.value += '7';
-    }
-
-    pulsa8() {
-        var text = document.getElementById('resultado');
-        text.value += '8';
-    }
-
-    pulsa9() {
-        var text = document.getElementById('resultado');
-        text.value += '9';
-    }
-
-    pulsa0() {
-        var text = document.getElementById('resultado');
-        text.value += '0';
-    }
-
-    resolver() {
+    igual() {
         try {
-            var str = document.getElementById('resultado').value;
-            document.getElementById("resultado").value = eval(str);
+            var str = this.pantalla;
+            this.pantalla = eval(str);
         }
         catch(err) {
-             document.getElementById("resultado").value = "Error = " + err;
+             this.pantalla = "Error = " + err;
         }
+        this.refresh();
     }
-    
+
     mrc() {
         this.memo = null;
     }
 
     mMenos() {
         if(this.memo != null) {
-            document.getElementById('resultado').value += this.memo;
+            this.pantalla += this.memo;
             this.memo = null;
+            this.refresh();
         }
     }
 
     mMas() {
         try {
-           this.memo = eval(document.getElementById('resultado').value);
+           this.memo = eval(this.pantalla);
         }
         catch(err) {
-           document.getElementById("resultado").value = "Error = " + err;
+           this.pantalla = "Error = " + err;
+           this.refresh();
         }
+    }
+
+    refresh() {
+        document.getElementById("resultado").value = this.pantalla;
     }
 }
 

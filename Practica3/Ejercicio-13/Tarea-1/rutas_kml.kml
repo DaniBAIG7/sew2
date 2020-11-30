@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>De Oviedo a Vegadeo</name>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>
+		-5.8480476998988635,43.36223048016113,224
+		-6.1219638716839295,43.397857055654335,362
+		-6.549319774135952,43.185980737782806,390
+		-6.871741702848741,43.05896953133918,296
+		-7.1079477537427005,43.38320808288379,254
+		-7.0277282,43.4247894,5
+</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </LineString>
+      <LineStyle>
+        <color>#FF0000FF</color>
+        <width>5</width>
+      </LineStyle>
+    </Placemark>
+    <Placemark>
+      <name>Mazinger Z</name>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>
+		-2.419682,42.488987,387
+		-2.753348915379024,42.102650661498295,1249
+		-2.7983743,42.2509713,657
+		-2.4454133,42.4671213,387
+</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </LineString>
+      <LineStyle>
+        <color>#FF0000FF</color>
+        <width>5</width>
+      </LineStyle>
+    </Placemark>
+    <Placemark>
+      <name>El cocodrilo</name>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <coordinates>
+		-1.612684,42.834655,434
+		-1.520688,43.017955,529
+		-1.543466,43.138690,206
+		-1.648904,42.843581,452
+</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </LineString>
+      <LineStyle>
+        <color>#FF0000FF</color>
+        <width>5</width>
+      </LineStyle>
+    </Placemark>
+  </Document>
+</kml>
