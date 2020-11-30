@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<head lang="es">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes">
     <title>Calculadora Básica</title>
@@ -13,15 +13,18 @@
     <header lang="es">
         <h1>Calculadora Básica</h1>
     </header>
+    <p>Calculadora completamente funcional que ofrece la posiblidad de realizar
+        operaciones matemáticas básicas.
+    </p>
     <article lang="es">
         <h2>calculadora básica V1</h2>
         
+        <input type="text" id="resultado" disabled />
         <label for="resultado">
             Pantalla de la calculadora
         </label>
-        <input type="text" id="resultado" disabled />
 
-        <div leng="es">
+        <div lang="es">
             <input type="button" value="mrc" class="opmanagement" onClick="calculadora.mrc()" />
             <input type="button" value="m-" class="opmanagement" onClick="calculadora.mMenos()" />
             <input type="button" value="m+" class="opmanagement" onClick="calculadora.mMas()" />
