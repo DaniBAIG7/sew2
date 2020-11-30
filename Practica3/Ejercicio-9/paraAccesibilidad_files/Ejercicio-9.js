@@ -88,7 +88,7 @@ class Meteo {
                 stringDatos += "<li>Descripción: " + descripcion + "</li>";
                 stringDatos += "<li>Hora de la medida: " + horaMedidaLocal + "</li>";
                 stringDatos += "<li>Fecha de la medida: " + fechaMedidaLocal + "</li>";
-                stringDatos += "<img src=http://openweathermap.org/img/wn/" + icon + "@2x.png alt=\"icono del tiempo en Cangas del Narcea\"/>"
+                stringDatos += "<li><img src=http://openweathermap.org/img/wn/" + icon + "@2x.png alt=\"icono del tiempo en Cangas del Narcea\"/></li></ul>"
 
                 $(salida).html(stringDatos);
             },
