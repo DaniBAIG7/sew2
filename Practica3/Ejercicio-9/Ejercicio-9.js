@@ -62,33 +62,33 @@ class Meteo {
                 var fechaMedidaLocal = (new Date(horaMedidaMiliSeg1970)).toLocaleDateString("es-ES");
                 var icon = $('weather', datos).attr("icon");
 
-                var stringDatos = "";
-                stringDatos += "<p>Ciudad: " + ciudad + "</p>";
-                stringDatos += "<p>Longitud: " + longitud + " grados</p>";
-                stringDatos += "<p>Latitud: " + latitud + " grados</p>";
-                stringDatos += "<p>Paí­s: " + pais + "</p>";
-                stringDatos += "<p>Amanece a las: " + amanecerLocal + "</p>";
-                stringDatos += "<p>Oscurece a las: " + oscurecerLocal + "</p>";
-                stringDatos += "<p>Temperatura: " + temperatura + " grados Celsius</p>";
-                stringDatos += "<p>Temperatura mí­nima: " + temperaturaMin + " grados Celsius</p>";
-                stringDatos += "<p>Temperatura máxima: " + temperaturaMax + " grados Celsius</p>";
-                stringDatos += "<p>Temperatura (unidades): " + temperaturaUnit + "</p>";
-                stringDatos += "<p>Humedad: " + humedad + " " + humedadUnit + "</p>";
-                stringDatos += "<p>Presión: " + presion + " " + presionUnit + "</p>";
-                stringDatos += "<p>Velocidad del viento: " + velocidadViento + " metros/segundo</p>";
-                stringDatos += "<p>Nombre del viento: " + nombreViento + "</p>";
-                stringDatos += "<p>Dirección del viento: " + direccionViento + " grados</p>";
-                stringDatos += "<p>Código del viento: " + codigoViento + "</p>";
-                stringDatos += "<p>Nombre del viento: " + nombreDireccionViento + "</p>";
-                stringDatos += "<p>Nubosidad: " + nubosidad + "</p>";
-                stringDatos += "<p>Nombre nubosidad: " + nombreNubosidad + "</p>";
-                stringDatos += "<p>Visibipdad: " + visibipdad + " metros</p>";
-                stringDatos += "<p>Precipitación valor: " + precipitacionValue + "</p>";
-                stringDatos += "<p>Precipitación modo: " + precipitacionMode + "</p>";
-                stringDatos += "<p>Descripción: " + descripcion + "</p>";
-                stringDatos += "<p>Hora de la medida: " + horaMedidaLocal + "</p>";
-                stringDatos += "<p>Fecha de la medida: " + fechaMedidaLocal + "</p>";
-                stringDatos += "<img src=http://openweathermap.org/img/wn/" + icon + "@2x.png alt=\"icono del tiempo en Cangas del Narcea\"/>"
+                var stringDatos = "<ul><li>Número de elementos del XML: " + totalNodos + "</li>";
+                stringDatos += "<li>Ciudad: " + ciudad + "</li>";
+                stringDatos += "<li>Longitud: " + longitud + " grados</li>";
+                stringDatos += "<li>Latitud: " + latitud + " grados</li>";
+                stringDatos += "<li>Paí­s: " + pais + "</li>";
+                stringDatos += "<li>Amanece a las: " + amanecerLocal + "</li>";
+                stringDatos += "<li>Oscurece a las: " + oscurecerLocal + "</li>";
+                stringDatos += "<li>Temperatura: " + temperatura + " grados Celsius</li>";
+                stringDatos += "<li>Temperatura mí­nima: " + temperaturaMin + " grados Celsius</li>";
+                stringDatos += "<li>Temperatura máxima: " + temperaturaMax + " grados Celsius</li>";
+                stringDatos += "<li>Temperatura (unidades): " + temperaturaUnit + "</li>";
+                stringDatos += "<li>Humedad: " + humedad + " " + humedadUnit + "</li>";
+                stringDatos += "<li>Presión: " + presion + " " + presionUnit + "</li>";
+                stringDatos += "<li>Velocidad del viento: " + velocidadViento + " metros/segundo</li>";
+                stringDatos += "<li>Nombre del viento: " + nombreViento + "</li>";
+                stringDatos += "<li>Dirección del viento: " + direccionViento + " grados</li>";
+                stringDatos += "<li>Código del viento: " + codigoViento + "</li>";
+                stringDatos += "<li>Nombre del viento: " + nombreDireccionViento + "</li>";
+                stringDatos += "<li>Nubosidad: " + nubosidad + "</li>";
+                stringDatos += "<li>Nombre nubosidad: " + nombreNubosidad + "</li>";
+                stringDatos += "<li>Visibilidad: " + visibilidad + " metros</li>";
+                stringDatos += "<li>Precipitación valor: " + precipitacionValue + "</li>";
+                stringDatos += "<li>Precipitación modo: " + precipitacionMode + "</li>";
+                stringDatos += "<li>Descripción: " + descripcion + "</li>";
+                stringDatos += "<li>Hora de la medida: " + horaMedidaLocal + "</li>";
+                stringDatos += "<li>Fecha de la medida: " + fechaMedidaLocal + "</li>";
+                stringDatos += "<li><img src=http://openweathermap.org/img/wn/" + icon + "@2x.png alt=\"icono del tiempo en Cangas del Narcea\"/></li></ul>"
 
                 $(salida).html(stringDatos);
             },

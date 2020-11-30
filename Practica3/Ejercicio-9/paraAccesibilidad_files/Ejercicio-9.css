@@ -38,17 +38,9 @@ h4 {
 }
 
 a {
-    color: #cc2626;
+    color: #ff0000;
 }
 
-li ul {
+ul{
     list-style: none;
-    display: flex;
-}
-
-li img {
-    margin-top: 1.2em;
-    margin-right: 3em;
-    width: 24em;
-    height: 15em;
 }
