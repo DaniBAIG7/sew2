@@ -108,7 +108,7 @@ class TransformarCoordenadas {
 
             // Set the N button.
 
-            document.getElementById('hemisferiosur').checked = true;
+            document.getElementById('hemisferiosur').checked = false;
 
         return true;
 
@@ -120,7 +120,7 @@ class TransformarCoordenadas {
 
 
 
-        latlon = new Array(2);
+        var latlon = new Array(2);
 
         var x, y, zone, southhemi;
 

@@ -23,31 +23,22 @@ h4 {
 
 body {
     background-color: #3dca8f;
+    text-align: center;
 }
 
 article div {
-    margin-left: 1.7em;
+    margin-top: 2em;
+    display: block;
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: block;
 }
 
 button {
-    margin-left: 1.7em;
-}
-
-article#transformarcoordenadas div.latlon{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-article#transformarcoordenadas div.utm{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-article#calculardistanciacoordenadas div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-section {
-    margin-left: 1.5em;
+    align-self: center;
+    margin: auto;
 }
