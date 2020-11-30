@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Mostrar GeoJSON en mapa</title>
+    <link href="./Ejercicio13.css" rel="stylesheet"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU"></script>
+    <script src="./Ejercicio13.js"></script>
+    
+</head>
+<body>
+    <h1>Mostrar GeoJSON en mapa cargando archivo</h1>
+    <h2>Cargar GeoJSON:</h2>
+    
+    <input id="subirGeoJSON" type="file" name="Archivos" onchange="reader.leer()"/>
+    
+    <div id="mapa"></div>
+    
+    <footer>
+        <a href="http://validator.w3.org/check/referer" hreflang="en-us">
+            <img src="valid-html5-button.png" alt="¡HTML5 válido!" />
+        </a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" />
+        </a>
+    </footer>
+</body>
+</html>

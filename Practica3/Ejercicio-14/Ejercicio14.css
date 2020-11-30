@@ -1,0 +1,24 @@
+
+body {
+    color: #362f16;
+    background-color: #dda34b;
+    text-align: center;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #faf9f4;
+    font: 5em;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #abd870;
+    font-style: italic;
+    font: 3em;
+}
+
+canvas {
+    width: 800px;
+    height: 500px;
+}
