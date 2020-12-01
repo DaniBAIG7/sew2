@@ -1,15 +1,14 @@
 body {
-    background-color: #ffd255;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16;
 }
 
 h1 {
     color: #ffffff;
-    text-shadow: -0.1em 0em #000000;
 }
 
 h2 {
-    color: #4d4428;
+    color: #ffbf00;
 }
