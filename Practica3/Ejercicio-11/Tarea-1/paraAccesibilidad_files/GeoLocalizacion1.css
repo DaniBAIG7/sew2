@@ -7,6 +7,6 @@ body {
 h1 {
     font-family: Arial;
     font-weight: bold;
-    color: #FFFFFF;
-    size: 7em;
+    color: #000000;
+    margin: 0 auto;
 }
