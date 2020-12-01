@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes">
     <title>Aplicar filtro a imagen</title>
-    <link rel="stylesheet" href="Ejercicio14.css" />
-    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="Ejercicio14.js"></script>
+    <link rel="stylesheet" href="paraAccesibilidad3_files/Ejercicio14.css">
+    <script src="paraAccesibilidad3_files/jquery-3.js"></script>
+    <script src="paraAccesibilidad3_files/Ejercicio14.js"></script>
 </head>
 
 <body onload="lector.presetting()">
@@ -17,7 +16,7 @@
             para aplicarle un filtro. La imagen puede sufrir una pérdida importante de calidad.
         </p>
     </header>
-    <input id="subirArchivos" type="file" name="Archivos" onchange="lector.cargarImagenPrevisualizacion()"/>
+    <input id="subirArchivos" type="file" name="Archivos" onchange="lector.cargarImagenPrevisualizacion()">
 
     <div id="imagenes">
         <section id="previsualizacionSeccion">
@@ -25,16 +24,16 @@
         <!--<img id="previsualizacion" onload="lector.permitirPantallaCompleta()" />-->
         </section>
         <br>
-        <button id="carga" onclick="lector.cargarEnCanvas()">Cargar imagen a canvas</button>
+        <button id="carga" onclick="lector.cargarEnCanvas()" style="display: none;">Cargar imagen a canvas</button>
         <h2>Imagen: </h2>
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" style=""></canvas>
         <p>Doble click sobre el lienzo para ver la imagen en pantalla completa</p>
-        <section id="filtros">
+        <section id="filtros" style="">
             <h2>Filtros</h2>
             <h3>Filtros predefinidos:</h3>
             <div id="filtrosPreestablecidos">
                 <select id="seleccion">
-                    <option value="Sepia">Sepia</option>
+                    <option value="Sepia" selected="selected">Sepia</option>
                     <option value="Invert">Invertido</option>
                     <option value="Cont">Contraste Alto</option>
                     <option value="ByN">Blanco y Negro</option>
@@ -44,6 +43,6 @@
         </section>
     </div>
 
-</body>
 
-</html>
+
+</body></html>
