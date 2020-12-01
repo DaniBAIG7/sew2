@@ -97,6 +97,11 @@ class Meteo {
       $("#datosMeteo").append("<p>Visibilidad: " + this.datos.current.visibility + " metros</p>");
       $("#datosMeteo").append("<img src=http://openweathermap.org/img/wn/" + this.datos.current.weather[0].icon + "@2x.png alt=\"icono del tiempo en localización seleccionada\"/>");
     }
+    $("#datosMeteo").show();
+  }
+
+  hideData() {
+    $("#datosMeteo").hide();
   }
 
   crearElemento(tipoElemento, texto, insertarAntesDe) {

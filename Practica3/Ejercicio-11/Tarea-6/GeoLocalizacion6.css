@@ -12,6 +12,12 @@ h1 {
     size: 7em;
 }
 
+h2 {
+    font-family: Arial;
+    font-weight: bold;
+    size: 3em;
+}
+
 label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFFFFF;
