@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Inspección de archivos</title>
+    <link rel="stylesheet" href="paraAccesibilidad_files/Ejercicio12.css">
+    <script src="paraAccesibilidad_files/Ejercicio12.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Inspección de Archivos</h1>
+        <p>Elige uno o varios archivos de la máquina local.
+            Si este archivo es un .json, un .xml o un .txt, en el
+            detalle de los archivos (más abajo) además de información
+            como el peso, la última fecha de modificación o el título,
+            se mostrará el contenido del mismo.
+        </p>
+    </header>
+    <h2>Seleccionar los archivos</h2>
+    <label for="subirArchivos">Seleccionar los archivos a inspeccionar: </label>
+    <input id="subirArchivos" type="file" name="Archivos" onchange="fm.mostrarArchivos()" multiple="">
+    <p>Archivos seleccionados: <span id="numero">3</span></p>
+    <p>Tamaño total: <span id="tamaño">9184 bytes</span></p>
+    <div id="nombres"><p>Archivo[0] = Ejemplo.json Tamaño: 603 bytes  Tipo: application/json</p><p>Archivo[1] = Ejemplo.txt Tamaño: 11 bytes  Tipo: text/plain</p><p>Archivo[2] = Ejemplo.xml Tamaño: 8570 bytes  Tipo: text/xml</p></div>
+    <div id="filesInfo"><article id="Ejemplo.json"><h2>Archivo: Ejemplo.json</h2><p>Nombre del archivo: Ejemplo.json</p><p>Tamaño del archivo: 603</p><p>Tipo del archivo: application/json</p><p>Fecha del archivo: undefined</p><h3>Texto del contenido:</h3><span id="contenidoEjemplo.json">{<br>    "glossary": {<br>        "title": "example glossary",<br>		"GlossDiv": {<br>            "title": "S",<br>			"GlossList": {<br>                "GlossEntry": {<br>                    "ID": "SGML",<br>					"SortAs": "SGML",<br>					"GlossTerm": "Standard Generalized Markup Language",<br>					"Acronym": "SGML",<br>					"Abbrev": "ISO 8879:1986",<br>					"GlossDef": {<br>                        "para": "A meta-markup language, used to create markup languages such as DocBook.",<br>						"GlossSeeAlso": ["GML", "XML"]<br>                    },<br>					"GlossSee": "markup"<br>                }<br>            }<br>        }<br>    }<br>}</span></article><article id="Ejemplo.txt"><h2>Archivo: Ejemplo.txt</h2><p>Nombre del archivo: Ejemplo.txt</p><p>Tamaño del archivo: 11</p><p>Tipo del archivo: text/plain</p><p>Fecha del archivo: undefined</p><h3>Texto del contenido:</h3><span id="contenidoEjemplo.txt">hola buenas</span></article><article id="Ejemplo.xml"><h2>Archivo: Ejemplo.xml</h2><p>Nombre del archivo: Ejemplo.xml</p><p>Tamaño del archivo: 8570</p><p>Tipo del archivo: text/xml</p><p>Fecha del archivo: undefined</p><h3>Texto del contenido:</h3><span id="contenidoEjemplo.xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>&lt;!DOCTYPE rutas&gt;<br><br>&lt;rutas&gt;<br>&lt;ruta
+ nombre="De Oviedo a Vegadeo" tipo="Arquitectura y monumentos" 
+dificultad="Fácil" duracion="2 dias" recomendacion="7" 
+aptitud="Conductores experimentados"&gt;<br>    &lt;agencia&gt;Sin agencia&lt;/agencia&gt;<br>    &lt;descripcion&gt;<br>        Desde autopistas de excelente firme y trazado podemos acceder en muy pocos kilómetros a despobladas y<br>
+        estrechas carreteras comarcales en esta divertida ruta en moto 
+que nos adentra en frondosos paisajes de infinitas tonalidades de verde<br>
+        y puertos plagados de curvas, de muchas curvas. Como un catálogo
+ con todos los tipos de trazadas que podremos encontrar a lo largo de 
+nuestra vida.<br>    &lt;/descripcion&gt;<br>    &lt;lugarinicio&gt;<br>        &lt;ciudad&gt;Oviedo&lt;/ciudad&gt;<br>        &lt;direccion&gt;Plaza de la Escandalera&lt;/direccion&gt;<br>        &lt;coordenadas&gt;43.36223048016113, -5.8480476998988635&lt;/coordenadas&gt;<br>    &lt;/lugarinicio&gt;<br>    &lt;referencias&gt;<br>
+        &lt;referencia 
+enlace="https://magazine.caser.es/sobre-ruedas/moteros/tres-rutas-en-moto-por-asturias/#Ruta_1_De_Oviedo_a_Vegadeo,_curvas_y_naturaleza_sin_igual"&gt;Fuente:
+ Información detallada&lt;/referencia&gt;<br>        &lt;referencia enlace="https://es.wikipedia.org/wiki/Vegadeo"&gt;Vegadeo&lt;/referencia&gt;<br>        &lt;referencia enlace="https://es.wikipedia.org/wiki/Oviedo"&gt;Oviedo&lt;/referencia&gt;<br>    &lt;/referencias&gt;<br>    &lt;hitos&gt;<br>        &lt;hito nombre="Alto Cabruñana" distanciaDesdeAnterior="32,5km"&gt;<br>            &lt;descripcion&gt;<br>                Final del primer tramo (Oviedo-Alto Cabruñana) desde el inicio de la ruta.<br>
+                Desde aquí empezamos la bajada del primer puerto, 
+comenzando el segundo tramo que finalizará en Cangas del Narcea.<br>            &lt;/descripcion&gt;<br>            &lt;coordenadas&gt;43.397857055654335, -6.1219638716839295&lt;/coordenadas&gt;<br>            &lt;fotografías&gt;<br>
+                &lt;fotografía 
+enlace="https://cycloclimbing.com/tour2005/bilder/140cabrunana.jpg"&gt;Imagen
+ del cartel del alto&lt;/fotografía&gt;<br>                
+&lt;fotografía 
+enlace="https://www.bici-tienda.com/blog/wp-content/uploads/2015/08/Perfil-del-puerto-Alto-de-la-Cabrunana-1024x768.jpg"&gt;Entorno&lt;/fotografía&gt;<br>            &lt;/fotografías&gt;<br>        &lt;/hito&gt;<br><br>        &lt;hito nombre="Cangas del Narcea" distanciaDesdeAnterior="63,5km"&gt;<br>            &lt;descripcion&gt;<br>                Final del segundo tramo de la ruta (Alto Cabruñana-Cangas del Narcea).<br>                Los aledaños del Parque Natural de las Fuentes del Narcea y la Reserva Natural de Muniellos<br>
+                nos permiten contemplar una naturaleza generosa, 
+especialmente en otoño cuando los hayedos y los robledales se tiñen de 
+todos los ocres imaginables.<br>            &lt;/descripcion&gt;<br>            &lt;coordenadas&gt;43.185980737782806, -6.549319774135952&lt;/coordenadas&gt;<br>            &lt;fotografías&gt;<br>
+                &lt;fotografía 
+enlace="https://www.turismoasturias.es/documents/11022/38360/BosqueMuniellos1.jpg?t=1389219900152"&gt;Reserva
+ de Muniellos&lt;/fotografía&gt;<br>                &lt;fotografía 
+enlace="https://www.codigopostal.org/images/imagen-de-cangas-del-narcea-2.jpg"&gt;Ciudad
+ de Cangas del Narcea&lt;/fotografía&gt;<br>                
+&lt;fotografía 
+enlace="https://www.turismoasturias.es/documents/11022/40187/05163_Reserva_Natural_Parcial_del_Cueto_de_Arbas.jpg/b49132d0-1826-4c7f-9d03-7be759909a7b?t=1475228236653"&gt;Parque
+ Natural de las Fuentes del Narcea&lt;/fotografía&gt;<br>            &lt;/fotografías&gt;<br>        &lt;/hito&gt;<br><br>        &lt;hito nombre="San Antolín de Ibias" distanciaDesdeAnterior="48,3km"&gt;<br>            &lt;descripcion&gt;<br>                Final del tercer tramo de la ruta (Cangas del Narcea-San Antolín de Ibias).<br>
+                Desde este punto, un pueblo pequeño y escondido como un 
+tesoro natural que cuenta con antiguos monumentos, casas típicas de esta
+ región y con su iglesia tambien antigua del siglo XIII, podremos 
+pararnos a descansar puesto que luego nos adentraremos brevemente en 
+tierras gallegas para volver a Asturias en un entorno declarado Reserva 
+de la Biosfera.<br>            &lt;/descripcion&gt;<br>            &lt;coordenadas&gt;43.05896953133918, -6.871741702848741&lt;/coordenadas&gt;<br>            &lt;fotografías&gt;<br>
+                &lt;fotografía 
+enlace="https://www.google.es/maps/place/33810+San+Antolin+de+Ibias,+Asturias/@43.03871,-6.8719969,3a,75y/data=!3m8!1e2!3m6!1sAF1QipOIdW-Ew8gR6jQqZHxJv4by9KbjM5jF0vIxN1-G!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOIdW-Ew8gR6jQqZHxJv4by9KbjM5jF0vIxN1-G%3Dw203-h270-k-no!7i3456!8i4608!4m22!1m16!4m15!1m6!1m2!1s0xd311c7b7d5046a3:0xd1a08eb50d093a2f!2sSan+Antolin+de+Ibias!2m2!1d-6.8719969!2d43.03871!1m6!1m2!1s0xd319d937d76c495:0x622507e5305df11a!2s33775+Taramundi,+Asturias!2m2!1d-7.1083458!2d43.3603936!3e0!3m4!1s0xd311c7b7d5046a3:0xd1a08eb50d093a2f!8m2!3d43.03871!4d-6.8719969"&gt;Pueblo
+ de San Antolin&lt;/fotografía&gt;<br>                &lt;fotografía 
+enlace="http://2.bp.blogspot.com/-5QUV5DS-nbc/VLF_YaEEVYI/AAAAAAAAAjE/VCH9rZAWlBQ/s1600/pic_04g-A.jpg"&gt;Catedral
+ de San Antolín de Ibias&lt;/fotografía&gt;<br>            &lt;/fotografías&gt;<br>        &lt;/hito&gt;<br><br>        &lt;hito nombre="Taramundi" distanciaDesdeAnterior="73km"&gt;<br>            &lt;descripcion&gt;<br>                Final del cuarto tramo de la ruta (San Antolín de Ibias-Taramundi).<br>
+                Taramundi, otro pintoresco centro turístico, célebre por
+ su arquitectura de pizarra, su orografía y su artesanía de cuchillos, 
+bien merece una dilatada pausa en el camino antes de afrontar la recta 
+final de la etapa hasta Vegadeo. Un lugar en el que podríamos tomar un 
+día de descanso para comprobar toda su riqueza natural. Fronteriza con 
+Galicia, la localidad presume de sus paseos fluviales, aptos para el 
+senderismo. No solo de (y sobre) moto vive el viajero.<br>            &lt;/descripcion&gt;<br>            &lt;coordenadas&gt;43.38320808288379, -7.1079477537427005&lt;/coordenadas&gt;<br>            &lt;fotografías&gt;<br>
+                &lt;fotografía 
+enlace="https://elviajerofeliz.com/wp-content/uploads/2016/03/Taramundi-un-tesoro-en-el-corazon-de-Asturias.jpg"&gt;Molino
+ en Taramundi&lt;/fotografía&gt;<br>                &lt;fotografía 
+enlace="https://i.ytimg.com/vi/-5et28_mXm4/maxresdefault.jpg"&gt;Pueblo 
+de Taramundi&lt;/fotografía&gt;<br>            &lt;/fotografías&gt;<br>        &lt;/hito&gt;<br><br>        &lt;hito nombre="Vegadeo" distanciaDesdeAnterior="17,9km"&gt;<br>            &lt;descripcion&gt;<br>                Final del quinto tramo de la ruta (Taramundi-Vegadeo). Fin de la ruta.<br>                Al final llegamos a Vegadeo, un pueblo fronterizo con Galicia que merece la pena tomarse su tiempo para ver.<br>            &lt;/descripcion&gt;<br>            &lt;coordenadas&gt;43.4247894, -7.0277282&lt;/coordenadas&gt;<br>            &lt;fotografías&gt;<br>
+                &lt;fotografía 
+enlace="http://4.bp.blogspot.com/-dZM5XyrnOus/UoU2zUZnnoI/AAAAAAAAAag/gNC5uqCsx70/s1600/foto+principal+vegadeo.jpg"&gt;Foto
+ de Vegadeo&lt;/fotografía&gt;<br>            &lt;/fotografías&gt;<br>        &lt;/hito&gt;<br>    &lt;/hitos&gt;<br>&lt;/ruta&gt;<br><br>&lt;ruta
+ nombre="De Oviedo a Vegadeo" tipo="Arquitectura y monumentos" 
+dificultad="Fácil" duracion="2 dias" recomendacion="7" 
+aptitud="Conductores comunes"&gt;<br>&lt;/ruta&gt;<br><br>&lt;ruta 
+nombre="Mazinger Z" tipo="Gastronomía y buenas carreteras" 
+dificultad="Normal" duracion="16 horas" recomendacion="6" 
+aptitud="Conductores experimentados"&gt;<br>    &lt;agencia&gt;Motorutas.com&lt;/agencia&gt;<br>    &lt;descripcion&gt;<br>
+        Buena comida, y numerosas curvas por la Sierra de Cameros con 
+unos paisajes de película, curvas hasta hartar y una ascensión que ronda
+ los 1600 metros de altitud.<br>    &lt;/descripcion&gt;<br>    &lt;lugarinicio&gt;<br>        &lt;ciudad&gt;Logroño&lt;/ciudad&gt;<br>        &lt;direccion&gt;intersección entre la LO-20 y la N-111&lt;/direccion&gt;<br>        &lt;coordenadas&gt;42.488987, -2.419682&lt;/coordenadas&gt;<br>    &lt;/lugarinicio&gt;<br>    &lt;referencias&gt;<br>
+        &lt;referencia 
+enlace="https://motorutas.com/detalleRuta.php?idruta=103910101&amp;seccion=datos"&gt;Fuente:
+ Información detallada&lt;/referencia&gt;<br>    &lt;/referencias&gt;<br>    &lt;hitos&gt;<br>        &lt;hito nombre="Montenegro de Cameros" distanciaDesdeAnterior="58km"&gt;<br>            &lt;descripcion&gt;<br>                Final del primer tramo de la ruta (Logroño-Montenegro de Cameros).<br>
+                Montenegro de Cameros, el único pueblo de la sierra de 
+Cameros perteneciente a la provincia de Soria Nos encontramos a unos 
+1150 m sobre el nivel del mar y en tan solo 6 km de distancia, 
+ascenderemos hasta los 1600 m, la cima de la ruta, por una carretera 
+llena de curvas y un paisaje divino. En la cima, donde volvemos a entrar
+ nuevamente en la provincia de la Rioja, se puede encontrar nieve 
+incluso en verano.<br>            &lt;/descripcion&gt;<br>            &lt;coordenadas&gt;42.102650661498295, -2.753348915379024&lt;/coordenadas&gt;<br>            &lt;fotografías&gt;<br>                &lt;fotografía&gt;&lt;/fotografía&gt;<br>            &lt;/fotografías&gt;<br>        &lt;/hito&gt; <br>    &lt;/hitos&gt;<br>&lt;/ruta&gt;<br>&lt;/rutas&gt;</span></article></div>
+
+
+</body></html>
