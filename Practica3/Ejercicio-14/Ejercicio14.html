@@ -10,20 +10,23 @@
 </head>
 
 <body onload="lector.presetting()">
-    <h1>Filtro para imagen</h1>
-    <p>Carga una imagen de la máquina local
-        para aplicarle un filtro. La imagen puede sufrir una pérdida importante de calidad.
-    </p>
-    <input id="subirArchivos" type="file" name="Archivos" onchange="lector.cargarImagenPrevisualizacion()" single/>
-    
+    <header>
+        <h1>Filtro para imagen</h1>
+        <p>Carga una imagen de la máquina local
+            para aplicarle un filtro. La imagen puede sufrir una pérdida importante de calidad.
+        </p>
+    </header>
+    <input id="subirArchivos" type="file" name="Archivos" onchange="lector.cargarImagenPrevisualizacion()" single />
+
     <section id="imagenes">
-        
-        <img id="previsualizacion" onload="lector.permitirPantallaCompleta()"/>
+        <h2>Previsualización de imagen: </h2>
+        <img id="previsualizacion" onload="lector.permitirPantallaCompleta()" />
         <br>
         <button id="carga" onclick="lector.cargarEnCanvas()">Cargar imagen a canvas</button>
+        <h2>Imagen: </h2>
         <canvas id="canvas"></canvas>
+        <p>Doble click sobre el lienzo para ver la imagen en pantalla completa</p>
         <section id="filtros">
-            <p>Doble click sobre el canvas para ver la imagen en pantalla completa</p>
             <h2>Filtros</h2>
             <h3>Filtros predefinidos:</h3>
             <div id="filtrosPreestablecidos">
@@ -37,7 +40,7 @@
             </div>
         </section>
     </section>
-    
+
 </body>
 
 </html>

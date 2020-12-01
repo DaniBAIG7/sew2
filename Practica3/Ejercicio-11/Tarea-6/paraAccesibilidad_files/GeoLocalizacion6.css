@@ -7,20 +7,18 @@ body {
 h1 {
     font-family: Arial;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #000000;
     margin: 0 auto;
-    size: 7em;
 }
 
 h2 {
     font-family: Arial;
     font-weight: bold;
-    size: 3em;
 }
 
 label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #FFFFFF;
+    color: #000000;
     display: block;
 }
 

@@ -86,7 +86,7 @@ class MapaEstaticoGoogle {
         var sensor = "&sensor=false"; 
         
         this.imagenMapa = url + centro + zoom + tamaño + marcador + sensor + apiKey;
-        ubicacion.innerHTML = "<img src='"+this.imagenMapa+"'/>";
+        ubicacion.innerHTML = "<img src='"+this.imagenMapa+"' alt=\"Mapa estático con centro en las coordenadas " + this.latitud + " " + this.longitud + "\"/>";
     }
 }
 var miMapa = new MapaEstaticoGoogle();
