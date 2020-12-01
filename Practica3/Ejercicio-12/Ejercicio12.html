@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Inspección de archivos</title>
     <link rel="stylesheet" href="Ejercicio12.css" />
     <script src="Ejercicio12.js"></script>
@@ -19,11 +19,11 @@
         </p>
     </header>
     <h2>Seleccionar los archivos</h2>
-    <label for="subirArchivos">Seleccionar los archivos a comprobar: </label>
+    <label for="subirArchivos">Seleccionar los archivos a inspeccionar: </label>
     <input id="subirArchivos" type="file" name="Archivos" onchange="fm.mostrarArchivos()" multiple>
     <p>Archivos seleccionados: <span id="numero">0</span></p>
     <p>Tamaño total: <span id="tamaño">0</span></p>
-    <span id="nombres"></span>
+    <div id="nombres"></div>
     <div id="filesInfo"></div>
 </body>
 
