@@ -7,9 +7,15 @@ body {
 h1 {
     font-family: Arial;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #000000;
     margin: 0 auto;
-    size: 7em;
+    font-size: 7em;
+}
+
+
+label {
+    color: #000000;
+    display: block;
 }
 
 #mapa {
