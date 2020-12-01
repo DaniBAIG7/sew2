@@ -36,6 +36,7 @@ class LectorImagen {
             }
             $("#previsualizacionSeccion").append(imagen);
             document.getElementById("previsualizacion").setAttribute("src", e.target.result);
+            document.getElementById("previsualizacion").setAttribute("alt", "Previsualización de la imagen que se va a meter al lienzo");
             document.getElementById("previsualizacion").setAttribute("onload", "lector.permitirPantallaCompleta()");
         };
 
@@ -51,8 +52,6 @@ class LectorImagen {
     cargarEnCanvas() {
         var img = document.getElementById("previsualizacion");
         this.context.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
-        img.setAttribute("src", "");
-        img.setAttribute("alt", "");
         $("#previsualizacion").remove();
         $("#carga").hide();
         $("#canvas").show();
