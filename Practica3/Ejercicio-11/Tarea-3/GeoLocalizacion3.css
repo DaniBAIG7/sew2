@@ -1,13 +1,12 @@
 body {
     text-align: center;
-    background-color:#48a3ce;
+    background-color: #8dc1da;
     color: #273b44;
 }
 
 h1 {
     font-family: Arial;
     font-weight: bold;
-    color: #ffee00;
+    color: #000000;
     margin: 0 auto;
-    size: 7em;
 }
