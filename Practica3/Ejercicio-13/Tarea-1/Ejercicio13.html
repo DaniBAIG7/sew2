@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
     <title>Mostrar KML en mapa</title>
     <link href="./Ejercicio13.css" rel="stylesheet"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -13,8 +14,7 @@
     <header>
         <h1>Mostrar KML en mapa cargando archivo</h1>
     </header>
-    <h2>Cargar KML:</h2>
-    
+    <label for="subirKML">Cargar KML: </label>
     <input id="subirKML" type="file" name="Archivos" onchange="reader.leer()"/>
     
     <div id="mapa"></div>
