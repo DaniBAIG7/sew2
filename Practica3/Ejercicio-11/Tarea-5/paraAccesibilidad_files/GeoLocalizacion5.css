@@ -12,12 +12,6 @@ h1 {
     size: 7em;
 }
 
-label {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #FFFFFF;
-    display: block;
-}
-
 #mapa {
     height: 500px;
     width: 100%;
