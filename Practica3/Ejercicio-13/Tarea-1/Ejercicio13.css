@@ -8,13 +8,12 @@ h1 {
     font-family: Arial;
     font-weight: bold;
     color: #000000;
-    margin: 0 auto;
-    font-size: 7em;
+    font-size: 4em;
+    margin-bottom: 0.5em;
 }
 
 label {
     color: #000000;
-    display: block;
 }
 
 #mapa {
