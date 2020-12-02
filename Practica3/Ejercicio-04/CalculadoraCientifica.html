@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=yes"/>
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="CalculadoraCientifica.css" />
+    <script src="CalculadoraCientifica.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora Científica</h1>
+    </header>
+    <article>
+        <h2>calculadora científica V1</h2>
+        
+        <input type="text" id="resultado" disabled />
+        <label for="resultado">
+            Pantalla de la calculadora
+        </label>
+        
+        <div>
+            <input type="button" value="^x" onClick="calculadora.potenciaX()" />
+            <input type="button" value="sin" onClick="calculadora.sin()" />
+            <input type="button" value="cos" onClick="calculadora.cos()" />
+            <input type="button" value="tan" onClick="calculadora.tan()" />
+
+
+            <input type="button" value="√" onClick="calculadora.raiz()" />
+            <input type="button" value="10^x" onClick="calculadora.diezElevadoA()" />
+            <input type="button" value="log" onClick="calculadora.base_e_log()" />
+            <input type="button" value="exp" onClick="calculadora.exp()" />
+
+
+            <input type="button" value="n!" onClick="calculadora.factorial()" />
+            <input type="button" value="π" onClick="calculadora.pi()" />
+            <input type="button" value="(" onClick="calculadora.parentesisIzq()" />
+            <input type="button" value=")" onClick="calculadora.parentesisDer()" />
+
+
+            <input type="button" value="↑" class="opmanagement" onClick="calculadora.shift()" />
+            <input type="button" value="C" class="opmanagement" onClick="calculadora.borrar()" />
+            <input type="button" value="CE" class="opmanagement" onClick="calculadora.borrarUltimo()" />
+            <input type="button" value="←" class="opmanagement" onClick="calculadora.erase()" />
+
+
+            <input type="button" value="mrc" class="opmanagement" onClick="calculadora.mrc()" />
+            <input type="button" value="m-" class="opmanagement" onClick="calculadora.mMenos()" />
+            <input type="button" value="m+" class="opmanagement" onClick="calculadora.mMas()" />
+            <input type="button" value="/" class="operator" onClick="calculadora.division()" />
+
+
+            <input type="button" value="7" class="digit" onClick="calculadora.digito(7)" />
+            <input type="button" value="8" class="digit" onClick="calculadora.digito(8)" />
+            <input type="button" value="9" class="digit" onClick="calculadora.digito(9)" />
+            <input type="button" value="*" class="operator" onClick="calculadora.multiplicacion()" />
+
+
+            <input type="button" value="4" class="digit" onClick="calculadora.digito(4)" />
+            <input type="button" value="5" class="digit" onClick="calculadora.digito(5)" />
+            <input type="button" value="6" class="digit" onClick="calculadora.digito(6)" />
+            <input type="button" value="-" class="operator" onClick="calculadora.resta()" />
+
+
+            <input type="button" value="1" class="digit" onClick="calculadora.digito(1)" />
+            <input type="button" value="2" class="digit" onClick="calculadora.digito(2)" />
+            <input type="button" value="3" class="digit" onClick="calculadora.digito(3)" />
+            <input type="button" value="+" class="operator" onClick="calculadora.suma()" />
+
+
+            <input type="button" value="0" class="digit" onClick="calculadora.digito(0)" />
+            <input type="button" value="." class="digit" onClick="calculadora.digito('.')" />
+            <input id="botonvacio" type="button" value="E" class="digit" onClick="calculadora.digito('e')" />
+            <input type="button" value="=" class="operator" onClick="calculadora.igual()" />
+        </div>
+    </article>
+</body>
+
+</html>

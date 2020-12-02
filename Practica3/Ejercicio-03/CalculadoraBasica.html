@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=yes"/>
+    <title>Calculadora Básica</title>
+    <link rel="stylesheet" href="CalculadoraBasica.css" />
+    <script src="CalculadoraBasica.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora Básica</h1>
+    </header>
+    <p>Calculadora completamente funcional que ofrece la posiblidad de realizar
+        operaciones matemáticas básicas.
+    </p>
+    <article>
+        <h2>calculadora básica V1</h2>
+        
+        <input type="text" id="resultado" disabled />
+        <label for="resultado">
+            Pantalla de la calculadora
+        </label>
+
+        <div>
+            <input type="button" value="mrc" class="opmanagement" onClick="calculadora.mrc()" />
+            <input type="button" value="m-" class="opmanagement" onClick="calculadora.mMenos()" />
+            <input type="button" value="m+" class="opmanagement" onClick="calculadora.mMas()" />
+            <input type="button" value="/" class="operator" onClick="calculadora.division()" />
+
+            <input type="button" value="7" onClick="calculadora.digito(7)" />
+            <input type="button" value="8" onClick="calculadora.digito(8)" />
+            <input type="button" value="9" onClick="calculadora.digito(9)" />
+            <input type="button" value="*" class="operator" onClick="calculadora.multiplicacion()" />
+
+            <input type="button" value="4" onClick="calculadora.digito(4)" />
+            <input type="button" value="5" onClick="calculadora.digito(5)" />
+            <input type="button" value="6" onClick="calculadora.digito(6)" />
+            <input type="button" value="-" class="operator" onClick="calculadora.resta()" />
+
+            <input type="button" value="1" onClick="calculadora.digito(1)" />
+            <input type="button" value="2" onClick="calculadora.digito(2)" />
+            <input type="button" value="3" onClick="calculadora.digito(3)" />
+            <input type="button" value="+" class="operator" onClick="calculadora.suma()" />
+
+            <input type="button" value="0" onClick="calculadora.digito(0)" />
+            <input type="button" value="." onClick="calculadora.digito('.')" />
+            <input type="button" value="C" class="opmanagement" onClick="calculadora.borrar()" />
+            <input type="button" value="=" class="operator" onClick="calculadora.igual()" />
+        </div>
+    </article>
+</body>
+
+</html>

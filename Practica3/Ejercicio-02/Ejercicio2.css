@@ -1,0 +1,38 @@
+/*001*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding:1em;
+    font-size:1em;
+    text-align: center; 
+    background-color:rgb(148, 203, 235);
+    color:rgb(37, 59, 80);
+}
+/*001*/
+h1 {
+    color:rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding: 80px 10px;
+    text-align: center; 
+    font-size: 200%;
+    background-color: rgb(15, 0, 70);
+    background-position: top right;
+}
+/*001*/
+h2 {
+    color:rgb(199, 21, 21);
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+/*001*/
+h3 {
+    color: rgb(165, 22, 22);
+    font-size: 1.3em;
+}
+h4{
+    color:rgb(145, 20, 20);
+    font-size: 1.2em;
+}
+/*001*/
+footer {
+    text-align: center;
+}

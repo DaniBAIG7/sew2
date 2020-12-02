@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=yes"/>
+    <title>Calculadora RPN</title>
+    <link rel="stylesheet" href="./Calculadora.css" />
+    <script src="./Calculadora.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora RPN</h1>
+    </header>
+
+    <p>
+        Calculadora que ofrece la resolución de operaciones matemáticas usando
+        la reverse polish notation.
+    </p>
+
+    <article>
+        <h2>calculadora RPN V1</h2>
+        <section>
+            <h3>Pila:</h3>
+            <textarea id="pila" rows="6" cols="20"></textarea>
+            <label for="pila">
+                Pantalla de la pila
+            </label>
+            <h3>Input:</h3>
+            <input lang="es" type="text" id="resultado" disabled />
+            <label for="resultado">
+                Pantalla de los input del usuario
+            </label>
+        </section>
+        <div>
+            <input type="button" value="^x" onClick="calculadora.potenciaX()" />
+            <input type="button" value="sin" onClick="calculadora.sin()" />
+            <input type="button" value="cos" onClick="calculadora.cos()" />
+            <input type="button" value="tan" onClick="calculadora.tan()" />
+
+            <input type="button" value="10^x" onClick="calculadora.diezElevadoA()" />
+            <input type="button" value="log" onClick="calculadora.base_e_log()" />
+            <input type="button" value="log10" onClick="calculadora.base_10_log()" />
+            <input type="button" value="exp" onClick="calculadora.exp()" />
+
+            <input type="button" value="n!" onClick="calculadora.factorial()" />
+            <input type="button" value="π" onClick="calculadora.pi()" />
+            <input type="button" value="e" onClick="calculadore.e()" />
+            <input type="button" value="√" onClick="calculadora.raiz()" />
+            <input type="button" value="↑" onClick="calculadora.shift()" />
+            <input type="button" value="CE" class="management" onClick="calculadora.clearUltimo()" />
+            <input type="button" value="C" class="management" onClick="calculadora.clear()" />
+            <input type="button" value="←" class="management" onClick="calculadora.erase()" />
+
+            <input type="button" value="7" class="digito" onClick="calculadora.digito(7)" />
+            <input type="button" value="8" class="digito" onClick="calculadora.digito(8)" />
+            <input type="button" value="9" class="digito" onClick="calculadora.digito(9)" />
+            <input type="button" value="*" class="operador" onClick="calculadora.multiplicacion()" />
+
+            <input type="button" value="4" class="digito" onClick="calculadora.digito(4)" />
+            <input type="button" value="5" class="digito" onClick="calculadora.digito(5)" />
+            <input type="button" value="6" class="digito" onClick="calculadora.digito(6)" />
+            <input type="button" value="-" class="operador" onClick="calculadora.resta()" />
+
+            <input type="button" value="1" class="digito" onClick="calculadora.digito(1)" />
+            <input type="button" value="2" class="digito" onClick="calculadora.digito(2)" />
+            <input type="button" value="3" class="digito" onClick="calculadora.digito(3)" />
+            <input type="button" value="+" class="operador" onClick="calculadora.suma()" />
+
+            <input type="button" value="0" class="digito" onClick="calculadora-digito(0)" />
+            <input type="button" value="." class="digito" onClick="calculadora-digito('.')" />
+            <input type="button" value="Enter" class="operador" onClick="calculadora.apilar()" />
+            <input type="button" value="/" class="operador" onClick="calculadora.division()" />
+        </div>
+    </article>
+</body>
+
+</html>
