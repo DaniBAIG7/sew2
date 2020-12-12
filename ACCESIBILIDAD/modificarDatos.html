@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://localhost/Ejercicio-6/ModificarDatos.php# -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <title>Menú base de datos</title>
+    <link rel="stylesheet" href="./modificarDatos_files/Ejercicio6.css">
+</head>
+
+<body>
+    <header>
+        <h1>Menú de la base de datos</h1>
+        <p>
+            Las diferentes formas de operar con
+            la base de datos.
+        </p>
+    </header>
+    <a href="http://localhost/Ejercicio-6/Ejercicio6.php">Volver al menú</a>
+    <h2>Modificar datos en la tabla PruebasUsabilidad</h2>
+    <p>Los datos se han modificado correctamente</p>
+        
+        <form action="http://localhost/Ejercicio-6/ModificarDatos.php#" method="post" name="botones" class="crearbasedatos">
+        <div>
+        <label for="codigo">ID:</label>
+        <input type="text" name="codigo" id="codigo">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos">
+
+        <label for="email">E-Mail:</label>
+        <input type="text" name="email" id="email">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="number" name="telefono" id="telefono">
+
+        <label for="sexo">Sexo:</label>
+        <input type="text" name="sexo" id="sexo">
+
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" id="edad">
+
+        <label for="nivel">Nivel o pericia informática:</label>
+        <input type="number" name="nivel" id="nivel">
+
+        <label for="tiempo">Tiempo:</label>
+        <input type="number" name="tiempo" id="tiempo">
+
+        <label for="realizada">Tarea realizada correctamente:</label>
+        <input type="number" name="realizada" id="realizada">
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" rows="16" cols="50"></textarea>
+
+        <label for="propuestas">Propuestas:</label>
+        <textarea id="propuestas" name="propuestas" rows="16" cols="50"></textarea>
+    
+        <label for="valoracion">Valoración de la aplicación:</label>
+        <input type="number" name="valoracion" id="valoracion">
+        </div>
+        <input type="submit" name="modificar" id="modificar" value="Modificar datos en PruebasUsabilidad">
+        </form>
+
+</body></html>
