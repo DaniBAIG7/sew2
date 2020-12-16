@@ -1,0 +1,106 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3em;
+    text-align: center;
+    padding: 1.5em;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+    color: #000000;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    color: #000000;
+}
+
+label {
+    color: #000000;
+    display: block;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+div form input {
+    border-radius: 0.5em;
+    height: 2em;
+    width: 3em;
+    min-width: max-content;
+    margin: 0.2em;
+    background-color: #515253;
+    color: #FFFFFF;
+}
+
+.digito {
+    background-color: #b4bec2;
+    color: #000000;
+}
+
+.management {
+    background-color: #00b5fc;
+    color: #000000;
+}
+
+.operador {
+    background-color: #e9dc22f3;
+    color: #000000;
+}
+
+textarea {
+    background-color: #aec9d3;
+    height: 8em;
+    width: 13.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    overflow-y: scroll;
+    resize: none;
+    margin-bottom: 1em;
+}
+
+section input {
+    background-color: #aec9d3;
+    height: 2.5em;
+    width: 13.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+section h3 {
+    margin-top: 1em;
+    margin-bottom: 0;
+    margin-left: 4em;
+    text-align: left;
+}
+
+article {
+    padding: 0.3em;
+    background-color: #d84747;
+    border-radius: 1em;
+    width: 15em;
+    text-align: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div form {
+    column-count: 4;
+    column-gap: 1em;
+    column-width: 2.5em;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+

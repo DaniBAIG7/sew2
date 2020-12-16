@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <title>Calculadora RPN</title>
+    <link rel="stylesheet" href="CalculadoraRPN_files/Calculadora.css">
+</head>
+
+<body>
+
+    
+        <header>
+            <h1>Calculadora RPN</h1>
+            <p>Calculadora completamente funcional que ofrece la posiblidad de realizar
+             operaciones matemáticas avanzadas usando la reverse polish notation
+            </p>
+        </header>
+        <article>
+            <h2>Calculadora Básica v1</h2>
+            <label for="pila">
+                Pantalla de la pila
+            </label>
+            <textarea id="pila" rows="6" cols="20">120
+</textarea>
+            <label for="pantalla">
+                Pantalla de los input del usuario
+            </label>
+            <input id="pantalla" type="text" disabled="disabled">
+            
+
+            <div id="botonera">
+                <form action="#" method="post" name="botones" class="calculadora">
+                    <input type="submit" name="^x" value="^x">
+                    <input type="submit" name="sin" value="sin">
+                    <input type="submit" name="cos" value="cos">
+                    <input type="submit" name="tan" value="tan">
+    
+                    <input type="submit" name="√" value="√">
+                    <input type="submit" name="10^x" value="10^x">
+                    <input type="submit" name="log" value="log">
+                    <input type="submit" name="exp" value="exp">
+    
+                    <input type="submit" name="n!" value="n!">
+                    <input type="submit" name="π" value="π">
+                    <input type="submit" name="(" value="(">
+                    <input type="submit" name=")" value=")">
+    
+                    <input type="submit" class="management" name="↑" value="↑">
+                    <input type="submit" class="management" name="C" value="C">
+                    <input type="submit" class="management" name="CE" value="CE">
+                    <input type="submit" class="management" name="←" value="←">
+                
+                    <input type="submit" class="management" name="mrc" value="mrc">
+                    <input type="submit" class="management" name="m-" value="m-">
+                    <input type="submit" class="management" name="m+" value="m+">
+                    <input type="submit" class="operador" name="/" value="/">
+
+                    <input type="submit" class="digito" name="7" value="7">
+                    <input type="submit" class="digito" name="8" value="8">
+                    <input type="submit" class="digito" name="9" value="9">
+                    <input type="submit" class="operador" name="*" value="*">
+
+                    <input type="submit" class="digito" name="4" value="4">
+                    <input type="submit" class="digito" name="5" value="5">
+                    <input type="submit" class="digito" name="6" value="6">
+                    <input type="submit" class="operador" name="-" value="-">
+
+                    <input type="submit" class="digito" name="1" value="1">
+                    <input type="submit" class="digito" name="2" value="2">
+                    <input type="submit" class="digito" name="3" value="3">
+                    <input type="submit" class="operador" name="+" value="+">
+
+                    <input type="submit" class="digito" name="0" value="0">
+                    <input type="submit" class="digito" name="." value=".">
+                    <input type="submit" class="digito" name="E" value="E">
+                    <input type="submit" class="management" name="Enter" value="Enter">
+                </form>
+            </div>
+        </article>
+        
+
+</body></html>
