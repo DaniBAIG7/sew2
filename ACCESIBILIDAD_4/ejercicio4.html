@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="ejercicio4_files/Ejercicio4.css">
+</head>
+
+<body>
+    
+        <header>
+            <h1>CALCULADOR VALOR MEDIO DE ACCIONES</h1>
+            <h2>Selecciona una compañía y dale al botón para calcular el valor medio de sus acciones en el registro de QUANDL</h2>
+        </header>
+        <form action="#" method="post" name="botones" class="calculadoraAcciones">
+            <label for="seleccion">Compañía:</label>
+            <select name="compañias" id="seleccion" onchange="accionCalculator.cargar()">
+               <option value="FB" selected="selected">Facebook</option>
+               <option value="AAPL">Apple</option>
+               <option value="TSLA">Tesla</option>
+               <option value="JNJ">Johnson &amp; Johnson</option>
+               <option value="PFE">Pfizer</option>
+               <option value="UNH">UnitedHealth Group</option>
+            </select>
+            <button name="search">Calcular</button>
+            <label for="valormedio">Valor medio de las acciones ($): </label>
+            <input id="valormedio" type="text" value="89.448743817935" disabled="disabled">
+        </form>
+        
+
+</body></html>
