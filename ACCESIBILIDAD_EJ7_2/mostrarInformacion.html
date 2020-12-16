@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://localhost/Ejercicio-7/ManejarInfo.php# -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <title>Información Fútbol</title>
+    <link rel="stylesheet" href="./mostrarInformacion_files/Ejercicio7.css">
+</head>
+
+<body>
+    <header>
+        <h1>Información Futbolística</h1>
+        <p>
+            Consulta jugadores importantes y su historial de equipos, así como detalles de estos.
+        </p>
+    </header>
+    <a href="http://localhost/Ejercicio-7/Ejercicio7.php">Volver al menú principal</a>
+    <h2>Mostrar información de equipo</h2>
+    
+            <div class="tabla">
+            <table>
+                <caption>Información del equipo Atletico de Var Int</caption>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Aficionados</th>
+                        <th>Fundación</th>
+                    </tr>
+                </thead>
+                <tbody><tr>
+                        <td>Atletico de Var Int</td>
+                        <td>700000</td>
+                        <td>1913</td>
+                    </tr></tbody>
+            </table>
+            </div>
+            <div class="tabla">
+            <table>
+                <caption>Información de los jugadores que juegan en Atletico de Var Int</caption>
+                <thead>
+                    <tr>
+                        <th>Nombre completo</th>
+                        <th>Goles marcados</th>
+                        <th>Fans</th>
+                    </tr>
+                </thead>
+                <tbody><tr>
+                        <td>Chulo Simone</td>
+                        <td>200</td>
+                        <td>1000000</td>
+                    </tr><tr>
+                        <td>Diego Const Var</td>
+                        <td>100</td>
+                        <td>20000</td>
+                    </tr><tr>
+                        <td>Jan Rollback</td>
+                        <td>0</td>
+                        <td>1000000</td>
+                    </tr><tr>
+                        <td>Juan Feliz</td>
+                        <td>120</td>
+                        <td>500000</td>
+                    </tr></tbody>
+            </table>
+            </div><h3>Historial de los jugadores:</h3><div id="infojugadores"><h4>Chulo Simone</h4><ul><li>Chulo Simone estuvo en el Atletico de Var Int, luciendo el dorsal 0 en la camiseta de Capa</li><li>Chulo Simone estuvo en el Atletico de Var Int, luciendo el dorsal 7 en la camiseta de Niquel</li></ul><h4>Diego Const Var</h4><ul><li>Diego Const Var estuvo en el Atletico de Var Int, luciendo el dorsal 9 en la camiseta de Capa</li><li>Diego Const Var estuvo en el Tónico, luciendo el dorsal 15 en la camiseta de Avisas</li></ul><h4>Jan Rollback</h4><ul><li>Jan Rollback estuvo en el Atletico de Var Int, luciendo el dorsal 1 en la camiseta de Capa</li></ul><h4>Juan Feliz</h4><ul><li>Juan Feliz estuvo en el Atletico de Var Int, luciendo el dorsal 7 en la camiseta de Capa</li><li>Juan Feliz estuvo en el Pentica, luciendo el dorsal 12 en la camiseta de New Bar Dance</li></ul></div>
+            <form action="http://localhost/Ejercicio-7/ManejarInfo.php#" method="post" name="botones" class="crearbasedatos">
+            <label for="seleccion">Equipos disponibles:</label>
+            <div>
+            <select name="equipos" id="seleccion">
+                <option value="Futbol Club Parselona">Fútbol Club Parselona</option>
+                <option value="Atletico de Var Int">Atlético de Var Int</option>
+                <option value="Real Matrix">Real Matrix</option>
+            </select>
+            <input name="mostrarinfo" value="Mostrar información de equipo" type="submit">
+            </div>
+            </form>
+</body></html>
