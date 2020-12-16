@@ -1,0 +1,3 @@
+Test de accesibilidad móvil en buscar datos (tabla)
+Test de accesibilidad móvil en el menú (texto muy junto)
+Problemas de idioma en Crear base de datos (TAW)

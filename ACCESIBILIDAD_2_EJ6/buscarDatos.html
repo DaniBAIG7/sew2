@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <title>Menú base de datos</title>
+    <link rel="stylesheet" href="buscarDatos_files/Ejercicio6.css">
+</head>
+
+<body>
+    <header>
+        <h1>Menú de la base de datos</h1>
+        <p>
+            Las diferentes formas de operar con
+            la base de datos.
+        </p>
+    </header>
+    <a href="http://localhost/Ejercicio-6/Ejercicio6.php">Volver al menú</a>
+    <h2>Buscar datos en la tabla PruebaUsabilidad</h2>
+    
+            <div class="tabla">
+            <table>
+                <caption>Información del usuario de la base de datos con DNI: 16438129P</caption>
+                <thead>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>E-Mail</th>
+                        <th>Teléfono</th>
+                        <th>Edad</th>
+                        <th>Sexo</th>
+                        <th>Nivel</th>
+                        <th>Tiempo</th>
+                        <th>Tarea realizada correctamente</th>
+                        <th>Comentarios</th>
+                        <th>Propuestas</th>
+                        <th>Valoración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>16438129P</td>
+                        <td>Paco</td>
+                        <td>Jémez</td>
+                        <td>paco12@gmail.com</td>
+                        <td>456324521</td>
+                        <td>47</td>
+                        <td>Masculino</td>
+                        <td>2</td>
+                        <td>20</td>
+                        <td>Si</td>
+                        <td>Buenas tardes a todos</td>
+                        <td>Hacerlo más fácil</td>
+                        <td>6</td>
+                    </tr>
+            </tbody>
+            </table>
+            </div>
+        <form action="#" method="post" name="botones" class="crearbasedatos">
+        <div>
+        <label for="dni">DNI cuyos datos serán buscados: </label>
+        <input name="dniABuscar" type="text" id="dni">
+        <input type="submit" name="buscar" id="buscar" value="Buscar">
+        </div>
+        </form>
+</body></html>
